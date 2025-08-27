@@ -4,12 +4,11 @@ adobe_key = "AB12CD34EF56GH78JK90LM12NO34PQ56"
 
 # SECRET: Adobe Credentials
 # (?i)adobe[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"](p8e-)(?i)[a-z0-9\\-_=+]{28,64}['\\\"]
-adobe_secret = "p8e-9z8y7x6w5v4u3t2s1r0_qp-on+ml_kj"
+adobe_secret = "p8e-abcd1234efgh5678ijkl9012mnop3456"
 
 # SECRET: Adobe Credentials
 # (=|>|:=|\\|\\|:|<=|=>|:)\\s*(p8e-)(?i)[a-z0-9\\-_=+]{28,64}
-token = p8e-9z8y7x6w5v4u3t2s1r0_qp-on+ml_kj
-
+k = p8e-abcd1234efgh5678ijkl9012mnop3456
 
 
 # SECRET: Age Secret Key Credentials
@@ -18,7 +17,7 @@ age_secret = "AGE-SECRET-KEY-abcdefghijABCDEFGHIJ1234567890klmnopqrstKLMNOPQRST1
 
 # SECRET: Age Secret Key Credentials
 # (=|>|:=|\|\|:|<=|=>|:)\s*AGE-SECRET-KEY-[A-Za-z0-9]{54,}
-token = AGE-SECRET-KEY-abcdefghijABCDEFGHIJ1234567890klmnopqrstKLMNOPQRST1234567890
+k = AGE-SECRET-KEY-abcdefghijABCDEFGHIJ1234567890klmnopqrstKLMNOPQRST1234567890
 
 
 # SECRET: Alibaba Credentials
@@ -36,15 +35,15 @@ alibaba_secret = "alibabaABCDEFGHIJ1234567890klmnopqrstuv+/"
 
 # SECRET: Asana Credentials
 # (?i)asana[a-z0-9_ .\\-,]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\\\"]([0-9]{16})['\\\"]
-asana_id = "1234567890123456"
+asana_id: "1234567890123456"
 
 # SECRET: Asana Credentials
 # (?i)asana[a-z0-9_ .\\-,]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\\\"]([a-z0-9]{32})['\\\"]
-asana_secret = "abcdefghij1234567890klmnopqrstuv"
+asana_secret: "abcdefghij1234567890klmnopqrstuv"
 
 
 # SECRET: Asymmetric Encryption Credentials
-open_ssh_private_key: str =
+open_ssh_private_key =
 -----BEGIN OPENSSH PRIVATE KEY-----
 b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
 QyNTUxOQAAACAQ2rw9FnMxDHndk1CB1r3j17FMGB1sDhSXueP1oJOHPgAAAKBFZoirRWaI
@@ -54,7 +53,7 @@ sUwYHWwOFJe54/Wgk4c+AAAAFnRvbnl0b255d3VAaG90bWFpbC5jb20BAgMEBQYH
 -----END OPENSSH PRIVATE KEY-----
 
 # SECRET: Asymmetric Encryption Credentials
-private_key: str =
+private_key =
 -----BEGIN PRIVATE KEY-----
 MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQ
 C5dZm6rVfRWcb0Ve6ZrNo1GL/QBLXqExnpvng9Pv9gzKdcfGvF
@@ -64,7 +63,6 @@ UCHyhh4DlrDptHGYMtG40RQp3qupNkD9l5r72J2AT2/434xFJY
 -----END PRIVATE KEY-----
 
 # SECRET: Atlassian Credentials
-# Atlassian Generic (24–192)
 # (?i)atlassian[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"]([a-zA-Z0-9+_/=\\-]{24,192})['\\\"]
 atlassian_key = "abcdefghijABCDEFGHIJ1234567890+/=--__1234567890"
 
@@ -80,27 +78,29 @@ atlassian_key = "abcdefghijABCDEFGHIJ1234567890+/=--__1234567890"
 
 
 # SECRET: Azure Credentials
+# Azure Generic Alnum+/= (60–90)
 # (?i)azure[a-z0-9_ .\\-,]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"]([A-Za-z0-9+/=]{60,90})['\\\"]
-azure_secret: str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+azure_secret = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 
 
 # SECRET: Bcrypt Hash Credentials
+# Bcrypt hash ($2a/$2b/$2x/$2y) with cost 04–31 (45–60 chars payload)
 # (?:^|[^A-Za-z0-9./])\$2[abxy]?\$(0[4-9]|[12][0-9]|3[0-1])?\$?[A-Za-z0-9./]{45,60}(?:$|[^A-Za-z0-9./])
-bcrypt_hash: str = "$2b$12$abcdefghijklmnopqrstuvABCDEFGHIJKLMNOPQRSTUVWXYZabcde"
+bcrypt_hash = "$2b$12$abcdefghijklmnopqrstuvABCDEFGHIJKLMNOPQRSTUVWXYZabcde"
 
 
 # SECRET: Beamer Credentials
 # (?i)beamer[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\"](b_[a-zA-Z0-9=_\-/+]{40,48})['\"]
-beamer_token: str = "b_ABCdef1234567890ghiJKLmnopQRSTUVwxyz+/-="
+beamer_token = "b_1234abcdEFGH5678ijklMNOPQRSTuvWXyz90+/-="
 
 
 # SECRET: Bitbucket Credentials
 # Short key (24–36 chars)
-bitbucket_key = "abcdefghijklmnopqrstuvwx12345678"
+bitbucket_key = "zxcvbnmasdfghjklqwertyui123456"
 
 # SECRET: Bitbucket Credentials
 # Long key (50–70 chars)
-bitbucket_token = "AbCdE-1234567890_qwertyuiopasdfghjklzxcvbnmMNBVCXZ"
+bitbucket_token = "12345-ABCDE_fghijklmnopqrstuvwxyz0987654321asdfghJKL"
 
 
 # SECRET: Clojars Credentials
@@ -114,34 +114,34 @@ clojars_token_quoted = "CLOJARS_abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuv
 
 # SECRET: Contentful Credentials
 # (?i)contentful[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\"]([a-z0-9-=_]{40,60})['\"]
-contentful_token: str = "contentful_abcdefghijklmnopqrstuvwxyz1234567890-=_"
+contentful_token = "contentful_abcdefghijklmnopqrstuvwxyz1234567890-=_"
 
 
 # SECRET: Databricks Credentials
 # ['\"]dapi[a-h0-9]{24,36}['\"]
-databricks_token: str = "dapi0123abcd4567efgh89a0bc1def2345678"
+databricks_token = "dapi0123abcd4567efgh89a0bc1def2345678"
 
 # SECRET: Databricks Credentials
 # (=|>|:=|\|\|:|<=|=>|:)\s*dapi[a-h0-9]{24,36}
-databricks_key: str = "dapiabcdef0123456789abcdef0123456789"
+databricks_key = "dapiabcdef0123456789abcdef0123456789"
 
 
 # SECRET: Digital Ocean Credentials
 # (?i)digital[a-z0-9_]*ocean[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\"]([a-f0-9]{60,68})['\"]
-digital_ocean_token: str = "abcdef123456abcdef123456abcdef123456abcdef123456abcdef123456abcdef12"
+digital_ocean_token = "abcdef012345abcdef012345abcdef012345abcdef012345abcdef012345abcd"
 
 
 # SECRET: Discord Credentials
 # (?i)discord[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"]([0-9]{14,32})['\\\"]
-discord_user_id: str = "123456789012345678"
+discord_user_id = "123456789012345678"
 
 # SECRET: Discord Credentials
 # (?i)discord[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"]([a-z0-9=_\\-\\.]{24,98})['\\\"]
-discord_token: str = "abcd1234_efgh5678-ijkl.mnopqrstu"
+discord_token = "abcd1234_efgh5678-ijkl.mnopqrstu"
 
 
 # SECRET: Docker Authentication Credentials
-docker_auth_config: str =
+docker_auth_config =
 {
   "auths": {
     "https://index.docker.io/v1/": {
@@ -154,11 +154,11 @@ docker_auth_config: str =
 
 # SECRET: Doppler Credentials
 # ['\"](dp\.pt\.)(?i)[a-z0-9]{36,48}['\"]
-doppler_token: str = "dp.pt.abcd1234efgh5678ijkl9012mnop3456qrstuvwx"
+doppler_token = "dp.pt.abcd1234efgh5678ijkl9012mnop3456qrstuvwx"
 
 # SECRET: Doppler Credentials
 # (=|>|:=|\|\|:|<=|=>|:)\s*(dp\.pt\.)(?i)[a-z0-9]{36,48}
-dopplerKey: str = "dp.pt.zxcv0987bnml6543asdf2109qwer8765tyuiopgh"
+dopplerKey = "dp.pt.zxcv0987bnml6543asdf2109qwer8765tyuiopgh"
 
 
 # SECRET: Dropbox Credentials
@@ -176,11 +176,11 @@ dropbox = "1234567890aAAAAAAAAAA12345678901234567890abcdefghijabcdefghij"
 
 # SECRET: Duffel Credentials
 # ['"](duffel_(test|live)_(?i)[a-z0-9_-]{40,48})['"]
-duffel_token: str = "duffel_test_abcdefghij1234567890klmnopqrstuvwxyz1234567890"
+duffel_token = "duffel_test_abcdefghij1234567890klmnopqrstuvwxyz1234567890"
 
 # SECRET: Duffel Credentials
 # (=|>|:=|\|:|<=|=>|:)\s*duffel_(test|live)_(?i)[a-z0-9_-]{40,48}
-duffel_key: str = "duffel_live_zxcv0987bnml6543asdf2109qwer8765tyuiop123456"
+duffel_key = "duffel_live_zxcv0987bnml6543asdf2109qwer8765tyuiop123456"
 
 
 # Dynatrace Credentials (bug 5683)
@@ -188,24 +188,25 @@ duffel_key: str = "duffel_live_zxcv0987bnml6543asdf2109qwer8765tyuiop123456"
 # Dynatrace Credentials (bug 5683)
 # Dynatrace Credentials (bug 5683)
 # Dynatrace Credentials (bug 5683)
+
 
 # SECRET: Easypost Credentials
 # (?i)['"]EZ[APT]K[a-z0-9]{32,56}['"]
-easy_post_token: str = "EZTKabcdefghij1234567890klmnopqrstuv1234567890abcdef"
+easy_post_token = "EZTKabcdefghij1234567890klmnopqrstuv1234567890abcdef"
 
 # SECRET: Easypost Credentials
 # (=|>|:=|\|:|<=|=>|:)\s*EZ[APT]K[a-z0-9]{32,56}
-easy_post_key: str = "EZPKzxcv0987bnml6543asdf2109qwer8765tyuiop123456"
+easy_post_key = "EZPKzxcv0987bnml6543asdf2109qwer8765tyuiop123456"
 
 
 # SECRET: Facebook Credentials
 # ((?i)(facebook[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([A-Za-z0-9]{24,48})['"]))
-facebook_token: str = "abcd1234efgh5678ijkl9012mnop3456qrst7890uvwx"
+facebook_token = "abcd1234efgh5678ijkl9012mnop3456qrst7890uvwx"
 
 
 # SECRET: Fastly Credentials
 # (?i)fastly[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([A-Za-z0-9_\-\.+!=]{20,36})['"]
-fastly_token: str = "abcd1234efgh5678ijkl9012mnop3456qrst"
+fastly_token = "abcd1234efgh5678ijkl9012mnop3456qrst"
 
 
 # SECRET: Filezilla Credentials
@@ -215,11 +216,11 @@ filezilla_password = '<Pass encoding="base64">U29tZUJhc2U2NERhdGE=</Pass>'
 
 # SECRET: Finicity Credentials
 # (?i)finicity[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-z0-9]{20})['"]
-finicity_token: str = "1234567890acbdefghss"
+finicity_token = "1234567890acbdefghss"
 
 # SECRET: Finicity Credentials
 # (?i)finicity[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-zA-Z0-9_\-+!]{80,120})['"]
-finicity_key: str = "abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyzABCD1234EFGH5678IJKL9012MNOP3456QRST7890"
+finicity_key = "abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyzABCD1234EFGH5678IJKL9012MNOP3456QRST7890"
 
 
 # SECRET: Flutterwave Credentials
@@ -250,36 +251,37 @@ frameio_secret_2 = fio-u-abcdefghij1234567890ABCDEFGHIJabcdefghij1234567890ABCDE
 
 # SECRET: Gcp Credentials
 # (?s){[^}]*[\\\"]?type[\\\"]?\\s*:\\s*[\\\"]?service_account[\\\"]?[\\s\\S.]*?(private_key_id['\\\"]?\\s*\\:\\s*['\\\"]?[a-zA-Z0-9_$@\\-]+['\\\"]?)[^}]*?}
-gcp_service_account_key = {
-    "type": "service_account",
-    "project_id": "my-project",
-    "private_key_id": "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o1p2q3r4s5t6"
-}
+gcp_service_account_key =
+    {
+        "type": "service_account",
+        "project_id": "my-project",
+        "private_key_id": "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o1p2q3r4s5t6"
+    }
 
 
 # SECRET: Generic Password Credentials
 # (?i)(password|passwd|user_pwd)[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]{0,2}\s*(=|>|:=|\|:|<=|=>|:)\s*[']{1,2}([^\s\{}?%[\]]+)[']{1,2}
-password_token: str = 'abcd1234efgh5678'
+password_token = 'abcd1234efgh5678'
 
 # SECRET: Generic Password Credentials
 # (?i)(password|passwd|user_pwd)[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]{0,2}\s*(=|>|:=|\|:|<=|=>|:)\s*["]{1,2}([^\s\{}?%[\]]+)["]{1,2}
-passwd_key: str = "zxcv0987bnml6543"
+passwd_key = "zxcv0987bnml6543"
 
 # Exclude
 # (?i)(password|passwd|user_pwd)[a-z0-9_]*['\"]{0,2}\s*(=|>|:=|\||: |<=|=>|:)\s*((True|true|false|False|0|1)|['\"](True|true|false|False|0|1)['\"]|(['\"]{1,2}([^\s\{\}\?\%\[\]]+)['\"]{1,2}[\.]))
-password = "true"
+password = "False"
 
 
 # SECRET: Generic Secret Key Credentials
 # (?i)['"]?\bsecret[a-z0-9_]*key[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(:)\s*([A-Za-z0-9/+=]{16,128})
-secret_key_token: str = "abcd1234efgh5678ijkl9012"
+secret_key_token = "abcd1234efgh5678ijkl9012"
 
 # SECRET: Generic Secret Key Credentials
 # (?i)['"]?\bsecret[a-z0-9_]*key[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|:=|=>|:)\s*['"]([a-zA-Z0-9_\-\.\$@*\^+!\[\]\(\)^=]{16,128})['"]
-secret_key_quoted: str = "zxcv0987bnml6543.asdf@123"
+secret_key_quoted = "zxcv0987bnml6543.asdf@123"
 
 # Excluded by: (?i)['"]?\bsecret[a-z0-9_]*key[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|:=|=>|:)\s*['"]\$([a-zA-Z0-9_\-\.\$@*\^+!\[\]\(\)^=]{15,128})['"]
-secret_key_excluded: str = "$zxcv0987bnml6543.asdf@123"
+secret_key_excluded = "$zxcv0987bnml6543.asdf@123"
 
 
 # SECRET: Github Credentials
@@ -310,16 +312,17 @@ gocardless_token = "live_abcdefghijABCDEFGHIJabcdefghij1234567890"
 
 # SECRET: Go Cardless Credentials
 # (=|>|:=|\||: |<=|=>|:)\s*live_(?i)[a-z0-9\-_=]{40}
-gocardless_token_raw = "live_abcdefghijABCDEFGHIJabcdefghij1234567890"
+gocardless_token_raw =
+    "live_abcdefghijABCDEFGHIJabcdefghij1234567890"
 
 
 # SECRET: Grafana Credentials
 # (?i)grafana[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?eyJrIjoi(?i)[a-z0-9\-_=]{72,126}['"]?
-grafana_token: str = "eyJrIjoiabcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890abcdef1234567890abcdefghij"
+grafana_token = "eyJrIjoiabcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890abcdef1234567890abcdefghij"
 
 # SECRET: Grafana Credentials
 # (?i)grafana[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?glsa_[a-zA-Z0-9_\-]{36,}['"]?
-grafana_key: str = "glsa_abcd1234efgh5678ijkl9012mnop3456qrst7890"
+grafana_key = "glsa_abcd1234efgh5678ijkl9012mnop3456qrst7890"
 
 
 # SECRET: Hashicorp Credentials
@@ -341,248 +344,248 @@ hashicorp_secret_4 : tfp_abcdefghij1234567890ABCD
 
 # SECRET: Heroku Credentials
 # (?i)heroku[a-z0-9_\]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?([0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12})['"]?
-heroku_token: str = "12345678-abcd-1234-abcd-1234567890ab"
+heroku_token = "12345678-abcd-1234-abcd-1234567890ab"
 
 # SECRET: Heroku Credentials
 # (?i)heroku[a-z0-9_\]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?(HRKU-[a-zA-Z0-9\_\-=+]{48,72})['"]?
-heroku_hrk_token: str = "HRKU-abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890abcd"
+heroku_hrk_token = "HRKU-abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890abcd"
 
 # SECRET: Heroku Credentials
 # (?i)heroku[a-z0-9_\]*key[a-z0-9_\]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?([A-Za-z0-9/+=]{16,48})['"]?
-heroku_key: str = "abcd1234efgh5678ijkl9012"
+heroku_key = "abcd1234efgh5678ijkl9012"
 
 
 # SECRET: Htpasswd Credentials
 # ^[a-zA-Z0-9_-]+:\$apr1\$[A-Za-z0-9./]{8}\$[A-Za-z0-9./]{22}$
-htpasswd_value: str = "user1:$apr1$abcdefgh$1234567890123456789012"
+htpasswd_value = "user1:$apr1$abcdefgh$1234567890123456789012"
 
 # SECRET: Htpasswd Credentials
 # (?i)[a-z0-9_]*htpasswd[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?([a-zA-Z0-9_-]+:\$apr1\$[A-Za-z0-9./]{8}\$[A-Za-z0-9./]{22})['"]?
-user_htpasswd: str = "admin:$apr1$ijklmnop$0987654321098765432109"
+user_htpasswd = "admin:$apr1$ijklmnop$0987654321098765432109"
 
 
 # SECRET: Http Auth Header Credentials
 # (?i)Authorization[\\]?['"]?\s*(=|:=|:|=>)\s*[\\]?['"]?Basic\s+[A-Za-z0-9+/]{16,}={0,2}['"]?
-auth_header_basic: str = "Authorization: Basic YWRtaW46c2VjdXJlcGFzczEyMw=="
+auth_header_basic = "Authorization: Basic YWRtaW46c2VjdXJlcGFzczEyMw=="
 
 # SECRET: Http Auth Header Credentials
 # (?i)Authorization[\\]?['"]?\s*(=|:=|:|=>)\s*[\\]?['"]?Bearer\s+([A-Za-z0-9-._~+/]{20,})\s*['"]?
-auth_header_bearer: str = "Authorization: Bearer abcdefghijklmnopqrst1234567890"
+auth_header_bearer = "Authorization: Bearer abcdefghijklmnopqrst1234567890"
 
 
 # SECRET: Hubspot Credentials
 # (?i)hubspot[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})['"]
-hubspot_token: str = "abcd1234-efgh-5678-ijkl-9012mnop3456"
+hubspot_token = "abcd1234-efgh-5678-ijkl-9012mnop3456"
 
 # SECRET: Hubspot Credentials
 # (?i)hubspot[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]pat-[a-z0-9]{1,4}-[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}['"]
-hubspot_pat: str = "pat-ab12-abcd1234-efgh-5678-ijkl-9012mnop3456"
+hubspot_pat = "pat-ab12-abcd1234-efgh-5678-ijkl-9012mnop3456"
 
 
 # SECRET: Hugging Face Token Credentials
 # ['"](hf_|api_org_|hf_app_)[a-zA-Z0-9]{30,64}['"]
-hugging_face_token: str = "hf_abcd1234efgh5678ijkl9012mnop3456"
+hugging_face_token = "hf_abcd1234efgh5678ijkl9012mnop3456"
 
 # SECRET: Hugging Face Token Credentials
 # (=|>|:=|\|:|<=|=>|:)\s*(hf_|api_org_|hf_app_)[a-zA-Z0-9]{30,64}
-hugging_face_key: str = api_org_1234567890abcdefeior1234567890ab
+hugging_face_key = api_org_1234567890abcdefeior1234567890ab
 
 
 # SECRET: Intercom Credentials
 # (?i)intercom[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([A-Za-z0-9=\-_]{48,72})['"]
-intercom_token: str = "abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890abcdefghij"
+intercom_token = "abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890abcdefghij"
 
 # SECRET: Intercom Credentials
 # (?i)intercom[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-h0-9]{8}-[a-h0-9]{4}-[a-h0-9]{4}-[a-h0-9]{4}-[a-h0-9]{12})['"]
-intercom_uuid: str = "abcd1234-efgh-5678-abcd-9012efgh3456"
+intercom_uuid = "abcd1234-efgh-5678-abcd-9012efgh3456"
 
 
 # SECRET: Ionic Credentials
 # (?i)ionic[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"](ion_[A-Za-z0-9]{32,45})['"]
-ionic_token: str = "ion_abcd1234efgh5678ijkl9012mnop3456qrst"
+ionic_token = "ion_abcd1234efgh5678ijkl9012mnop3456qrst"
 
 
 # SECRET: Jekyll Token Credentials
 # (?i)[a-z0-9_]*jekyll[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*[a-zA-Z0-9]{24,}
-jekyll_token: str = abcd1234efgh5678ijkl9012mnop3456
+jekyll_token = abcd1234efgh5678ijkl9012mnop3456
 
 # SECRET: Jekyll Token Credentials
 # (?i)[a-z0-9_]*jekyll[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"][a-zA-Z0-9]{24,}['"]
-jekyll_key: str = "1234567890abcdef1234567890abcdef"
+jekyll_key = "1234567890abcdef1234567890abcdef"
 
 
 # SECRET: Jwt Token Credentials
 # \b(?i)jwt[a-z0-9_]*['"]?\s*(=|:|=>|:=)\s*['"]([A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+)['"]
-jwt_token: str = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+jwt_token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
 
 # SECRET: Jwt Token Credentials
 # eyJ[a-zA-Z0-9_\-]+\.(eyJ[A-Za-z0-9-_]+)\.[A-Za-z0-9-_]+
-jwt_auth: str = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+jwt_auth = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
 
 # SECRET: Jwt Token Credentials
 # eyJ[a-zA-Z0-9_\-]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+
-jwt_extended: str = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIn0.abcd1234.efgh5678.ijkl9012"
+jwt_extended = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIn0.abcd1234.efgh5678.ijkl9012"
 
 
 # SECRET: Launchdarkly Token Credentials
 # ['"]api-[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}['"]
-launch_darkly_token: str = "api-abcd1234-efgh-5678-ijkl-9012mnop3456"
+launch_darkly_token = "api-abcd1234-efgh-5678-ijkl-9012mnop3456"
 
 # SECRET: Launchdarkly Token Credentials
 # ['"]api-[a-f0-9]{32}['"]
-launch_darkly_key: str = "api-abcdef0123456789abcdef0123456789"
+launch_darkly_key = "api-abcdef0123456789abcdef0123456789"
 
 # SECRET: Launchdarkly Token Credentials
 # (=|>|:=|\|:|<=|=>|:)\s*api-[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}
-launch_darkly_uuid: str = api-abcd1234-efgh-5678-ijkl-9012mnop3456
+launch_darkly_uuid = api-abcd1234-efgh-5678-ijkl-9012mnop3456
 
 # SECRET: Launchdarkly Token Credentials
 # (=|>|:=|\|:|<=|=>|:)\s*api-[a-f0-9]{32}
-launch_darkly_hex: str = api-1234567890abcdef1234567890abcdef
+launch_darkly_hex = api-1234567890abcdef1234567890abcdef
 
 
 # SECRET: Linear Credentials
 # ['"]lin_api_[A-Za-z0-9]{32,44}['"]
-linear_api_token: str = "lin_api_abcd1234efgh5678ijkl9012mnop3456"
+linear_api_token = "lin_api_abcd1234efgh5678ijkl9012mnop3456"
 
 # SECRET: Linear Credentials
 # (=|>|:=|\|:|<=|=>|:)\s*lin_api_[A-Za-z0-9]{32,44}
-linear_api_key: str = lin_api_1234567890abcdef1234567890abcdef
+linear_api_key = lin_api_1234567890abcdef1234567890abcdef
 
 # SECRET: Linear Credentials
 # (?i)linear[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-f0-9]{28,44})['"]
-linear_token: str = "abcdef0123456789abcdef0123456789"
+linear_token = "abcdef0123456789abcdef0123456789"
 
 
 # SECRET: Linkedin Credentials
 # (?i)linkedin[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((?i)[a-z0-9_\.=+!-]{14,64})['"]
-linkedin_token: str = "abcd1234efgh5678_ijkl9012.mnop=qr+st"
+linkedin_token = "abcd1234efgh5678_ijkl9012.mnop=qr+st"
 
 
 # SECRET: Lob Credentials
 # (?i)lob[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((live|test)_[a-f0-9]{28,38})['"]
-lob_token: str = "live_abcdef0123456789abcdef0123456789"
+lob_token = "live_abcdef0123456789abcdef0123456789"
 
 # SECRET: Lob Credentials
 # (?i)lob[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((live|test)_pub_[a-f0-9]{28,35})['"]
-lob_pub_token: str = "live_pub_1234567890abcdef1234567890ab"
+lob_pub_token = "live_pub_1234567890abcdef1234567890ab"
 
 
 # SECRET: Mailchimp Token Credentials
 # (?i)[a-z0-9_]*mailchimp[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*[a-zA-Z0-9]{24,42}-us[0-9]{1,3}
-mailchimp_token: str = abcd1234efgh5678ijkl9012mnop3456-us12
+mailchimp_token = abcd1234efgh5678ijkl9012mnop3456-us12
 
 # SECRET: Mailchimp Token Credentials
 # (?i)[a-z0-9_]*mailchimp[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"][a-zA-Z0-9]{24,42}-us[0-9]{1,3}['"]
-mailchimp_key: str = "1234567890abcdef1234567890abcdef-us12"
+mailchimp_key = "1234567890abcdef1234567890abcdef-us12"
 
 
 # SECRET: Mailgun Credentials
 # (?i)mailgun[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((pub)?key-[a-f0-9]{32})['"]
-mailgun_token: str = "key-abcdef0123456789abcdef0123456789"
+mailgun_token = "key-abcdef0123456789abcdef0123456789"
 
 # SECRET: Mailgun Credentials
 # (?i)mailgun[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-h0-9]{32}-[a-h0-9]{8}-[a-h0-9]{8})['"]
-mailgun_key: str = "abcdef0123456789abcdef0123456789-abcdefgh-abcdefgh"
+mailgun_key = "abcdef0123456789abcdef0123456789-abcdefgh-abcdefgh"
 
 
 # SECRET: Mapbox Credentials
 # (?i)(pk\.[a-z0-9\-_]{54,100}\.[a-z0-9\-_]{16,32})
-mapbox_token: str = "pk.abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890ab.abcdefghijklmnop"
+mapbox_token = "pk.abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890ab.abcdefghijklmnop"
 
 
 # SECRET: Messagebird Credentials
 # (?i)messagebird[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((?i)[a-z0-9]{20,48})['"]
-messagebird_token: str = "abcd1234efgh5678ijkl9012mnop3456"
+messagebird_token = "abcd1234efgh5678ijkl9012mnop3456"
 
 # SECRET: Messagebird Credentials
 # (?i)messagebird[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((?i)[a-h0-9]{8}-[a-h0-9]{4}-[a-h0-9]{4}-[a-h0-9]{4}-[a-h0-9]{12})['"]
-messagebird_uuid: str = "abcd1234-efgh-5678-abcd-9012efgh3456"
+messagebird_uuid = "abcd1234-efgh-5678-abcd-9012efgh3456"
 
 
 # SECRET: Mongodb Connection String Credentials
 # \bmongodb(?:\+srv)?:\/\/(?!<)[^\s:@\/]+:[^\s:@\/]+@[^\s]+
-mongo_db_connection: str = "mongodb://admin:securepass123@cluster0.mongodb.net"
+mongo_db_connection = "mongodb://admin:securepass123@cluster0.mongodb.net"
 
 
 # SECRET: Mysql Connection String Credentials
 # (?i)`?(mysql|jdbc:mysql)://((?!{.*})[^\s:@/]+)(:((?!{.*})[^\s:@/]+))?@[^\\s:/]+(:[^\\s/]+)?/((?!{.*})[^\\s?]+)`?
-mysql_connection: str = "mysql://admin:securepass123@localhost:3306/mydb"
+mysql_connection = "mysql://admin:securepass123@localhost:3306/mydb"
 
 # SECRET: Mysql Connection String Credentials
 # (?i)`?(mysql|jdbc:mysql)://[^\\s:/]+(:[^\\s/]+)?/((?!{.*})[^\\s?]+)\?.*?((user=((?!{.*})[^&\s]+))|(password=((?!{.*})[^&\s]+)))
-mysql_connection_params: str = "mysql://localhost:3306/mydb?user=admin&password=securepass123"
+mysql_connection_params = "mysql://localhost:3306/mydb?user=admin&password=securepass123"
 
 
 # SECRET: New Relic Credentials
 # NRAK-[A-Z0-9]{16,30}\b
-new_relic_api_key: str = "NRAK-XYZ78901PQR23456STUV"
+new_relic_api_key = "NRAK-XYZ78901PQR23456STUV"
 
 # SECRET: New Relic Credentials
 # NRJS-[a-z0-9]{16,30}\b
-new_relic_js_key: str = "NRJS-xyzw7890pqrs1234tuv"
+new_relic_js_key = "NRJS-xyzw7890pqrs1234tuv"
 
 # SECRET: New Relic Credentials
 # NRBR-[a-z0-9]{16,30}\b
-new_relic_browser_key: str = "NRBR-9012345678xyzab12345"
+new_relic_browser_key = "NRBR-9012345678xyzab12345"
 
 # SECRET: New Relic Credentials
 # (?i)newrelic[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((?i)[a-z0-9\-_]{44,82})['"]
-newrelic_token: str = "abcdef0123-ghij4567-klmn8901-pqrs2345-tuvwxyz6789-abcde"
+newrelic_token = "abcdef0123-ghij4567-klmn8901-pqrs2345-tuvwxyz6789-abcde"
 
 
 # SECRET: Npm Access Credentials
 # ['"]npm_(?i)[a-z0-9]{30,42}['"]
-npm_token: str = "npm_abcdef0123456789ghijklmnop1234567890"
+npm_token = "npm_abcdef0123456789ghijklmnop1234567890"
 
 
 # SECRET: Openai Token Credentials
 # ['"]sk-[a-zA-Z0-9]{25,50}['"]
-openai_token: str = "sk-abcd1234EFGH5678ijkl9012MNOP3456"
+openai_token = "sk-abcd1234EFGH5678ijkl9012MNOP3456"
 
 # SECRET: Openai Token Credentials
 # (=|>|:=|\|:|<=|=>|:)\s*sk-[a-zA-Z0-9]{25,50}
-openai_key: str = sk-12345678abcdEFGH9012ijklMNOP3456
+openai_key = sk-12345678abcdEFGH9012ijklMNOP3456
 
 
 # SECRET: P12 Credentials
 # \.p12\s*(=|:=|:|=>|)\s*['"]([a-zA-Z0-9\-_./]{24,})['"]
-p12_cert: str = "cert.p12=abcd1234-efgh5678_ijkl9012.mnop3456"
+p12_cert = "cert.p12=abcd1234-efgh5678_ijkl9012.mnop3456"
 
 # SECRET: P12 Credentials
 # \.p12\s*(=|:=|:|=>|)\s*([a-zA-Z0-9\-_./]{24,})
-p12_path: str = cert.p12=12345678-abcd9012_efgh3456.ijkl7890
+p12_path = cert.p12=12345678-abcd9012_efgh3456.ijkl7890
 
 
 # SECRET: Paypal Credentials
 # (?i)paypal[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-zA-Z0-9\-_]{24,84})['"]
-paypal_token: str = "abcd1234EFGH5678_ijkl9012-MNOP3456"
+paypal_token = "abcd1234EFGH5678_ijkl9012-MNOP3456"
 
 # SECRET: Paypal Credentials
 # ['"]A21A[A-Za-z0-9-_]{92}['"]
-paypal_api_key: str = "A21A90123456XYZW7890abcd1234EFGH5678ijkl9012MNOPqrst3456UVWXyzab7890CDEF1234ghij5678klmn90122222"
+paypal_api_key = "A21A90123456XYZW7890abcd1234EFGH5678ijkl9012MNOPqrst3456UVWXyzab7890CDEF1234ghij5678klmn90122222"
 
 # SECRET: Paypal Credentials
 # (=|>|:=|\|:|<=|=>|:)\s*A21A[A-Za-z0-9-_]{92}
-paypal_api_secret: str = A21A90123456XYZW7890abcd1234EFGH5678ijkl9012MNOPqrst3456UVWXyzab7890CDEF1234ghij5678klmn90122222
+paypal_api_secret = A21A90123456XYZW7890abcd1234EFGH5678ijkl9012MNOPqrst3456UVWXyzab7890CDEF1234ghij5678klmn90122222
 
 
 # SECRET: Planetscale Credentials
 # ['"]pscale_pw_(?i)[a-z0-9\-_\.]{36,52}['"]
-planetscale_key: str = "pscale_pw_abcd1234-efgh5678_ijkl9012.mnop3456qrst"
+planetscale_key = "pscale_pw_abcd1234-efgh5678_ijkl9012.mnop3456qrst"
 
 # SECRET: Planetscale Credentials
 # ['"]pscale_tkn_(?i)[a-z0-9\-_\.]{36,52}['"]
-planetscale_token: str = "pscale_tkn_12345678-abcd9012_efgh3456.ijkl7890mnop"
+planetscale_token = "pscale_tkn_12345678-abcd9012_efgh3456.ijkl7890mnop"
 
 
 # SECRET: Postgresql Connection String Credentials
 # (?i)`?(postgres|jdbc:postgresql|postgresql)\:\/\/[^\s\:@\/]+(\:[^{}\s\:@\/]+)@[^{}\s\:\/]+(\:[^{}\s\/]+)?\/[^{}\s?]+`?
-postgres_connection: str = "postgres://admin:secure123@localhost:5432/mydb"
+postgres_connection = "postgres://admin:secure123@localhost:5432/mydb"
 
 # SECRET: Postgresql Connection String Credentials
 # (?i)`?(postgres|jdbc:postgresql|postgresql)\:\/\/[^\s\:\/]+(\:[^\s\/]+)?\/((?!{.*})[^\s?]+)\?.*?((user=((?!{.*})[^&\s]+))|(password=((?!{.*})[^&\s]+)))
-postgres_connection_params: str = "postgres://localhost:5432/mydb?user=admin&key=secure123"
+postgres_connection_params = "postgres://localhost:5432/mydb?user=admin&key=secure123"
 
 
 # SECRET: Postman Api Credentials
@@ -630,7 +633,7 @@ sendinblue_api_key = "xkeysib-abcdeabcde1234567890abcdeabcde1234567890abcdeabcde
 
 # SECRET: Shippo Api Credentials
 # shippo_(live|test)_[a-f0-9]{36,48}\b
-shippo_api_key: str = "shippo_live_aabbccdeef0123456789aabbccdeef0123456789"
+shippo_api_key = "shippo_test_ffeeddccbb9876543210ffeeddccbb9876543210"
 
 
 # SECRET: Shopify Credentials
@@ -657,7 +660,7 @@ slack_api_key_3 = xoxa-abcdefghij1234567890ABCDEFGHIJ1234567890-
 
 # SECRET: Stripe Credentials
 # (?i)stripe[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"](?i)(sk|pk)_(live|test)_[a-z0-9]{10,120}['"]
-stripe_api_key1: str = "sk_live_aabbccdeef0123456789"
+stripe_api_key1 = "sk_live_aabbccdeef0123456789"
 
 # SECRET: Stripe Credentials
 # (?i)stripe[a-z0-9_]*\s*(=|>|:=|\|:|<=|=>|:)\s*(?i)(sk|pk)_(live|test)_[a-z0-9]{10,120}
@@ -665,39 +668,39 @@ stripe_api_key2 = pk_test_0123456789aabbccdeef
 
 # SECRET: Stripe Credentials
 # ['"]sk_(live|test)_[A-Za-z0-9]{10,32}['"]
-stripe_api_key3: str = "sk_live_AABBCCDDEF0123456789"
+stripe_api_key3 = "sk_live_AABBCCDDEF0123456789"
 
 # SECRET: Stripe Credentials
 # (=|>|:=|\|:|<=|=>|:)\s*sk_(live|test)_[A-Za-z0-9]{10,32}
-stripe_api_key4: str = sk_test_AABBCCDDEF0123456789
+stripe_api_key4 = sk_test_AABBCCDDEF0123456789
 
 
 # SECRET: Twilio Credentials
 # ['"]SK[0-9a-fA-F]{32}['"]
-twilio_api_key1: str = "SKaabbccdeef0123456789abcdef01234567"
+twilio_api_key1 = "SKaabbccdeef0123456789abcdef01234567"
 
 # SECRET: Twilio Credentials
 # (=|>|:=|\|:|<=|=>|:)\s*SK[0-9a-fA-F]{32}
-twilio_api_key2: str = SKaabbccdeef0123456789abcdef01234567
+twilio_api_key2 = SKaabbccdeef0123456789abcdef01234567
 
 # SECRET: Twilio Credentials
 # (?i)twilio[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([A-Za-z0-9+/]{24,50})['"]
-twilio_api_key3: str = "aabbccdeef0123456789abcd"
+twilio_api_key3 = "aabbccdeef0123456789abcd"
 
 
 # SECRET: Twitch Credentials
 # (?i)twitch[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"](?i)[a-z0-9]{24,36}['"]
-twitch_api_key: str = "aabbccdeef0123456789aabbccdeef"
+twitch_api_key = "aabbccdeef0123456789aabbccdeef"
 
 
 # SECRET: Twitter Credentials
 # (?i)twitter[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([A-Za-z0-9+/\-_+]{24,64})['"]
-twitter_api_key: str = "aabbccdeef0123456789abcdABCD12"
+twitter_api_key = "aabbccdeef0123456789abcdABCD12"
 
 
 # SECRET: Typeform Api Credentials
 # (?i)typeform[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"](tfp_[a-z0-9\-_\.=]{54,64})['"]
-typeform_api_key: str = "tfp_aabbccdeef0123456789_.-=aabbccdeef0123456789_.-=aabbcc"
+typeform_api_key = "tfp_aabbccdeef0123456789_.-=aabbccdeef0123456789_.-=aabbcc"
 
 
 # SECRET: Wordpress Auth Credentials
@@ -711,4 +714,4 @@ wordpress_api_key_2 = "define('AUTH_KEY', 'abcdefghij1234567890ABCDEFGHIJ12!@#$'
 
 # SECRET: Zoom Credentials
 # (?i)zoom[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\"]([a-zA-Z0-9\-_]{24,60})['\"]
-zoom_token: str = "AbcdEFGH1234ijkl-5678MNOP_qrstUVWX90yz12"
+zoom_token = "AbcdEFGH1234ijkl-5678MNOP_qrstUVWX90yz12"

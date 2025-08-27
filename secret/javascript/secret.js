@@ -1,39 +1,49 @@
-// SECRET: Jwt Token Credentials
-const jwtToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+// SECRET: Adobe Credentials
+// (?i)adobe[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"]([A-Za-z0-9]{32,40})['\\\"]
+const adobe_secret = "AB12CD34EF56GH78JK90LM12NO34PQ56";
 
-// SECRET: Gitlab Credentials
-const gitlab_token = "glpat-dq1B4A-AeX1-4A3MXQhT"
+// SECRET: Adobe Credentials
+// (?i)adobe[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"](p8e-)(?i)[a-z0-9\\-_=+]{28,64}['\\\"]
+let adobe_token = "p8e-abc123def456ghi789_jk-lm+no_pq";
 
-// SECRET: Github Credentials
-const github_token = "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"
+// SECRET: Adobe Credentials
+// (=|>|:=|\\|\\|:|<=|=>|:)\\s*(p8e-)(?i)[a-z0-9\\-_=+]{28,64}
+key = p8e-abc123def456ghi789_jk-lm+no_pq
 
-// SECRET: Bitbucket Credentials
-const bitbucket_token = "ATBBp8zS5k23CPySJeWZe7xRAmwW038AF110"
-// SECRET: Bitbucket Credentials
-const bitbucket_secret = "bmB92CMJZMa7BQckuusEWBbteeWP5kCR"
 
-// SECRET: Grafana Credentials
-const grafana_token = "eyJrIjoiZmFrZV9ncmFmYW5hX2FwaV90b2tlbiIsIm4iOiJmYWtlLXRva2VuIiwiaWQiOjEyMzQ1fQ=="
+// SECRET: Age Secret Key Credentials
+// ['\"]AGE-SECRET-KEY-[A-Za-z0-9]{54,}['\"]
+const ageSecret = "AGE-SECRET-KEY-abcdefghijABCDEFGHIJ1234567890klmnopqrstKLMNOPQRST1234567890";
 
-// SECRET: Aws String Credentials
-const aws_access_key = "AKIAYQNJSNK27TWFLAEE"
-// SECRET: Aws String Credentials
-const aws_access_secret = "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"
+// SECRET: Age Secret Key Credentials
+// (=|>|:=|\|\|:|<=|=>|:)\s*AGE-SECRET-KEY-[A-Za-z0-9]{54,}
+key = AGE-SECRET-KEY-abcdefghijABCDEFGHIJ1234567890klmnopqrstKLMNOPQRST1234567890
 
-// SECRET: Facebook Credentials
-const facebook_token = "EAABwzLixnjYBAJFAKE1234TOKEN5678FORTESTINGONLY90EXAMPLE"
 
-// SECRET: Mongodb Connection String Credentials
-const mongoUri = "mongodb://user:password@localhost:27017/mydatabase?authSource=admin"
-// SECRET: Mysql Connection String Credentials
-const mysqlUri = "mysql://user:password@localhost:3306/testdb"
-// SECRET: Postgresql Connection String Credentials
-const postgresUri = "postgres://user:password@localhost:5432/mydb"
-// SECRET: Postgresql Connection String Credentials
-const postgresqlUri = "postgresql://user:password@localhost:5432/mydb"
+// SECRET: Alibaba Credentials
+// ['\"]LTAI[A-Za-z0-9]{12,32}['\"]
+const alibabaKey = "LTAIabcdefghij1234567890klmnop";
+
+// SECRET: Alibaba Credentials
+// (=|>|:=|\|\|:|<=|=>|:)\s*LTAI[A-Za-z0-9]{12,32}
+key = LTAIabcdefghij1234567890klmnop;
+
+// SECRET: Alibaba Credentials
+// (?i)alibaba[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\s*(=|>|:=|\\|\\|:|<=|=>|:)\s*['\\\"]([A-Za-z0-9+/=]{30,50})['\\\"]
+const alibaba_secret = "alibabaABCDEFGHIJ1234567890klmnopqrstuv+/";
+
+
+// SECRET: Asana Credentials
+// (?i)asana[a-z0-9_ .\\-,]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\\\"]([0-9]{16})['\\\"]
+let asana_id = "1234567890123456";
+
+// SECRET: Asana Credentials
+// (?i)asana[a-z0-9_ .\\-,]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\\\"]([a-z0-9]{32})['\\\"]
+const asana_secret = "abcdefghij1234567890klmnopqrstuv";
+
 
 // SECRET: Asymmetric Encryption Credentials
-const rsaPrivateKey =`
+const openSshPrivateKey =
 -----BEGIN OPENSSH PRIVATE KEY-----
 b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
 QyNTUxOQAAACAQ2rw9FnMxDHndk1CB1r3j17FMGB1sDhSXueP1oJOHPgAAAKBFZoirRWaI
@@ -41,205 +51,663 @@ qwAAAAtzc2gtZWQyNTUxOQAAACAQ2rw9FnMxDHndk1CB1r3j17FMGB1sDhSXueP1oJOHPg
 AAAECtwceU5L0FZZliRWJo+5for6JS60fevlB9XmLf4XJTLBDavD0WczEMed2TUIHWvePX
 sUwYHWwOFJe54/Wgk4c+AAAAFnRvbnl0b255d3VAaG90bWFpbC5jb20BAgMEBQYH
 -----END OPENSSH PRIVATE KEY-----
-`
-
-//  Atlassian Credentials (Not support yet)
-const atlassian_token = "ATATT3xFfGF0Qkb61j7USSQqzkWRII__ktuByaOmsAiUcULUdOx-jobTW8730VumcwHOQkGLXv0-HDWFDAxt3Vl5k_dpGBRCAw00h9zU6qi6GvdEtuuVJjzbOytq6-8-xladqcRa3VWjouW1M-83q4cTjb7NJb6-ppj0wP2kNjldrg1oDHfNqlE=C88BA84F"
 
 // SECRET: Asymmetric Encryption Credentials
-// GCP Credentials (Not support yet)
-const gcp_service_account = {
-    type: "service_account",
-    project_id: "forti-cnapp-qa",
-    private_key_id: "3fdefb4040763d6700bdb90cbf0902b943cd6147",
-    private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC5dZm6rVfRWcb0\nVe6ZrNo1GL/QBLXqExnpvng9Pv9gzKdcfGvFGqHTHBuDqfRHAdBmoB+Sp9S8XkUs\nHBe7Pim2448quBPPK15Ldh8fvQpNNHPE+0rFNbVOX79YSx8MmeEx2jQTS/wpEbFP\n0E1mCZBoUCHyhh4DlrDptHGYMtG40RQp3qupNkD9l5r72J2AT2/434xFJYfsmRoB\niLj1TzKZpWRUVOgQ6JMma+BebmEyIN0CDWHKxb4rgaJcCIW5TeKrzBy0XCIW7E2K\njgHz3yktCL8FQTPxkDHQZj9bqU2+RgUIyUD+pp4QHb9IreGmVv8sZ5sd33Hv6ztn\nW5Ev8yWxAgMBAAECggEAFwSAX03JENG/in75UW+ld/JRySGyicIT5OG3xuMxGyyf\nR3BmSETrSXorNIrFB4STPs94B7HGipf5JhW5AMtg7kLdN5g31i4r4nn/OCdUVltw\nlGW7ZJFLRrZFt3HAYWYeT9uE+9GiEt9QJkekOYotlvK+Gd15L2kWHTVg5VrGUnWD\nftw/+pVr7PpuOaJGVQjCLAJigJpQwNbScRkQ7UUMFmgF6zlLeugcadcLTE1Fn7AI\na3TFd23jG1C6vSgMJfTjzLvc23RoVGtDIA4rjf9iy/YQoN1C0VNid8olrhw3JO8+\n+g4r0wBDtyliKcJopFFs+Sm338IK+6qV4xQyBthGGQKBgQDdjDYHzjM7wpPMQ3oM\n33ErO+fOLFy6SaNDPRm2JweMepiRfGkoDD6IhmlFtkF29Y40uGt+pfanJ8G3Yy7t\nVNjNmiLbXxwBiOJA7kq3VYv8KLNu16OQnzPC1dlvD5Ko8oCx6sQeShWWzxxFp1IQ\ndhEZlR8QSI4pIivUzquGkGOsqQKBgQDWTLenac4wMNl+O6gJWq8PVtTEeXfgy4Xq\nOGia+P1vdiMfv6LuHcjxMTStgaVeoE6PvSEl638oifYCywgUY6dRRANqX0EuMTKt\nDSX5fJ1rhRZJ++5GVcP/vxzuUI2W0Cwyr7ORgnRLVD+i8UFd7xv+JSy+CoWW4eVz\nSGqTmgwNyQKBgFfkmErgc1LyDtCqtHEG9E7CpWQWFXOSY0L5qompUkVZHc4aHV3V\n/bkMGheeBrq7EH+56muETCZkj2XB44wkbR6kV8/QG7xAIgLAhsPVHIQdYZJH2ow1\nnMNfM7Pr6bM9AfGTwdqCaa463GyFxPji3kXX80ryffOzqs/ybfokrmaBAoGAVA2J\nJy/XwI0YcWuir/CSoziSgXGHNHN/VevEE6y/cr1qb2Rx2mVyUC/Vkow8OY404inz\nW3Uvzc224UeTJrQjhzte/5TW8vA3CSsUDvPypp5vrJsUzR+Mnb3u8gZEUrfZ7hN+\nIf+B753ey+FGmzpSx277SprD5Pc7UOlBbB1KxwkCgYAhZQY+K7b/Mx6OsbFZJzhD\nq16DiwaYYkGASLtYeqXmlPrmCSbLqXBvJQKHnENYF/sXF2EzZ8/FpBoBr0Ed40mI\nxjEwBTsqRKXy80nKgnbBk27LhmatCd+O746iJYeIx2W6K2x+vHCoHZjWskOLGFMq\n9famoahd4fbNYfHHmgDAUQ==\n-----END PRIVATE KEY-----\n",
-    client_email: "codesec-test@forti-cnapp-qa.iam.gserviceaccount.com",
-    client_id: "114001318971456687189",
-    auth_uri: "https://accounts.google.com/o/oauth2/auth",
-    token_uri: "https://oauth2.googleapis.com/token",
-    auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
-    client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/codesec-test%40forti-cnapp-qa.iam.gserviceaccount.com",
-    universe_domain: "googleapis.com"
-}
+const privateKey =
+-----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQ
+C5dZm6rVfRWcb0Ve6ZrNo1GL/QBLXqExnpvng9Pv9gzKdcfGvF
+GqHTHBuDqfRHAdBmoB+Sp9S8XkUsHBe7Pim2448quBPPK15Ldh
+8fvQpNNHPE+0rFNbVOX79YSx8MmeEx2jQTS/wpEbFP0E1mCZBo
+UCHyhh4DlrDptHGYMtG40RQp3qupNkD9l5r72J2AT2/434xFJY
+-----END PRIVATE KEY-----
 
-// SECRET: Openai Token Credentials
-const openAi_token = "sk-v9tPbU1nMI4xotH3zDBLT8BlbkGJIpowNJsctwolbw1ybAfj"
 
-// SECRET: Pypi Credentials
-const pypi_token = "pypi-AgEIcHlwaS5vcmcCJDc3ODIxZmRjLTA1YmUtNDdjYi04ZAAyLWExMGYxNTM1NzFhZgACKlszLCJmYWEzNzUzZS03NzU2LTRjOTMtOTJkNi1lMmJlODVkYjRmMWEiXQAABiDBtwjwQAUVfWrigqypvR5cqWZ7LkJYj83Y5NkbSYOWFA"
+// SECRET: Atlassian Credentials
+// (?i)atlassian[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"]([a-zA-Z0-9+_/=\\-]{24,192})['\\\"]
+const atlassian_key = "abcdefghijABCDEFGHIJ1234567890+/=--__1234567890";
 
-// SECRET: Slack Credentials
-const slack_bot_oauth_token = "xoxb-123456789012-123456789012-abcdefghijklmnopqrstuvwx"
-// SECRET: Slack Credentials
-const slack_oauth_token = "xoxp-123456789012-123456789012-abcdefghijklmnopqrstuvwx"
 
-// SECRET: Postman Api Credentials
-const postman_token = "PMAK-6801e0917e69cc0001fb53fe-cc403b32980969f2b93f8a18ac950dc8bf"
+// Aws Credentials (bugs: 5682, 5683)
+// Aws Credentials (bugs: 5682, 5683)
+// Aws Credentials (bugs: 5682, 5683)
 
-// HTTP Auth Header Credentials (Not support yet)
-const headers = {
-    Authorization: "Basic YWRtaW46cGFzc3dvcmQ="
-}
 
-// SECRET: Docker Authentication Credentials
-const docker_auth = {
-    "https://index.docker.io/v1/": {
-        "email": "admin@email.com",
-        "auth": "YWRtaW46QVA1N05OaHZTMnM5Qk02RkR5RjNBVmF4TVFl"
-    }
-};
+// Aws String Credentials (bug 5683)
+// Aws String Credentials (bug 5683)
+// Aws String Credentials (bug 5683)
 
-// SECRET: Generic Password Credentials
+
+// SECRET: Azure Credentials
+// (?i)azure[a-z0-9_ .\\-,]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"]([A-Za-z0-9+/=]{60,90})['\\\"]
+const azure_secret = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+
+
 // SECRET: Bcrypt Hash Credentials
-const bcrypt_hashed_password = "$2y$10$EWdA4giXl8stXpheaJN8de73rHT4Y2DAHagPwb2EcwTJj7M9BdLoe"
+// (?:^|[^A-Za-z0-9./])\$2[abxy]?\$(0[4-9]|[12][0-9]|3[0-1])?\$?[A-Za-z0-9./]{45,60}(?:$|[^A-Za-z0-9./])
+const bcrypt_hash = "$2b$12$abcdefghijklmnopqrstuvABCDEFGHIJKLMNOPQRSTUVWXYZabcde";
+
 
 // SECRET: Beamer Credentials
-const beamer_api_key = "b_7s8tjugeydslyqykig3vrb9y29jchkuyweemc251cbv6"
+// (?i)beamer[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\"](b_[a-zA-Z0-9=_\-/+]{40,48})['\"]
+const beamer_token = "b_12345ABCDEfghij67890klmnoPQRSTuvwxYZ+/ABCD";
+
+
+// SECRET: Bitbucket Credentials
+// Short key (24–36 chars)
+const bitbucket_key = "mnopqrstuvwx1234567890ABCDEFGHIJ";
+
+// SECRET: Bitbucket Credentials
+// Long key (50–70 chars)
+const bitbucket_token = "AbcD-1234567890_qwertyuiopasdfghjklzxcvbnmZXCVBNMNOP";
+
 
 // SECRET: Clojars Credentials
-const clojars_api_token = "CLOJARS_ad580296f6309f2bfe1e8c9a12631d3def850cefe4a9a3e2166dab8103e6"
+// (?i)(=|>|:=|\|\|:|<=|=>|:)\s*CLOJARS_[a-z0-9]{54,64}
+const clojars_token = CLOJARS_abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234;
+
+// SECRET: Clojars Credentials
+// (?i)['\"]CLOJARS_[a-z0-9]{54,64}['\"]
+const clojars_token_quoted = "CLOJARS_abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234";
+
 
 // SECRET: Contentful Credentials
-const contentful_delivery_api_token = "9Rpff2_uxUrxuiyE_VQ7LlLcwWEqgTooEymLCkNFECA"
+// (?i)contentful[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\"]([a-z0-9-=_]{40,60})['\"]
+const contentful_token = "contentful_abcdefghijklmnopqrstuvwxyz1234567890-=_";
+
 
 // SECRET: Databricks Credentials
-const databricks_api_token = "dapi72766020efab76b5ad71bd6107344301"
+// ['\"]dapi[a-h0-9]{24,36}['\"]
+const databricks_token = "dapi0123abcd4567efgh89a0bc1def2345678";
 
-// (Not support yet)
-const digital_ocean_api_token = "710550c7dad844f89c9414db7556e74f3faedf9f5228ab2099c67fa1f2a61f66"
+// SECRET: Databricks Credentials
+// (=|>|:=|\|\|:|<=|=>|:)\s*dapi[a-h0-9]{24,36}
+const databricks_key = "dapiabcdef0123456789abcdef0123456789";
+
+
+// SECRET: Digital Ocean Credentials
+// (?i)digital[a-z0-9_]*ocean[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\"]([a-f0-9]{60,68})['\"]
+const digital_ocean_token = "abcdef012345abcdef012345abcdef012345abcdef012345abcdef012345abcd";
+
 
 // SECRET: Discord Credentials
-const discord_client_id = "840643401846147428"
+// (?i)discord[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"]([0-9]{14,32})['\\\"]
+const discord_user_id = "123456789012345678";
+
 // SECRET: Discord Credentials
-const discord_client_secret = "iodDmFSUDXXirwgOVc15vSBKxDt8n-25"
-// SECRET: Discord Credentials
-const discord_api_key = "94bec3f6741f06291e67cd8b90363b79c0b68024f65622c333d79f1055c4c65b"
+// (?i)discord[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"]([a-z0-9=_\\-\\.]{24,98})['\\\"]
+const discord_token = "abcd1234_efgh5678-ijkl.mnopqrstu";
+
+
+// SECRET: Docker Authentication Credentials
+const dockerAuthConfig = {
+  "auths": {
+    "https://index.docker.io/v1/": {
+      "username": "yuri",
+      "auth": "eXVyaTpsb25nZXJzZWNyZXR2YWx1ZTEyMw=="
+    }
+  }
+}
+
 
 // SECRET: Doppler Credentials
-const doppler_api_token = "dp.pt.zkxYYBKO2oztRQj72SOAA13PmVyTwI7AboM8bknx"
+// ['\"](dp\.pt\.)(?i)[a-z0-9]{36,48}['\"]
+const doppler_token = "dp.pt.abcd1234efgh5678ijkl9012mnop3456qrstuvwx";
+
+// SECRET: Doppler Credentials
+// (=|>|:=|\|\|:|<=|=>|:)\s*(dp\.pt\.)(?i)[a-z0-9]{36,48}
+const dopplerKey = "dp.pt.zxcv0987bnml6543asdf2109qwer8765tyuiopgh";
+
 
 // SECRET: Dropbox Credentials
-const dropbox_secret = "h1r909z5a6aqpn2"
-// SECRET: Dropbox Credentials
-const dropbox_api_token = "sl.ByGF-oqQAmb-VRzuY0NqMBQwM_c07IByqIaSt6w5Ov2zbEUiPZRvKKnONDM2SdfMhnvvbkXiO7_RtDQ4Gud6pR6uouc7Zndar80hbFdhKrpNwTZCkSKcbbNWZ97jb_tQlTG29ijoBKIV"
+// (?i)dropbox[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-z0-9]{12,16})['"]
+const dropboxApiSecret = "abcdefghijklmnop";
 
-// SECRET: Dynatrace Credentials
-const dynatrace_api_token = "dt0c01.ST2EY72KQINMH574WMNVI7YN.L3DFOBEDIMODIDAEX894M7JWBIVDEOYQARVWWFASS34NEH59ZX6BNDXFFM572RMA"
+// SECRET: Dropbox Credentials
+// (?i)dropbox[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"](sl\.[a-z0-9\-=_]{124,148})['"]
+const dropboxShortLivedToken = "sl.ABCD1234efgh5678ijkl9012mnop3456qrstuvwxyzABCD1234efgh5678ijkl9012mnop3456qrstuvwxyzABCD1234efgh5678ijkl9012mnop3456qrstuvwxyz";
+
+// SECRET: Dropbox Credentials
+// (?i)dropbox[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"][a-z0-9]{11}(AAAAAAAAAA)[a-z0-9\-_=]{40,48}['"]
+const dropbox = "1234567890aAAAAAAAAAA12345678901234567890abcdefghijabcdefghij";
+
+
+// SECRET: Duffel Credentials
+// ['"](duffel_(test|live)_(?i)[a-z0-9_-]{40,48})['"]
+const duffelToken = "duffel_test_abcdefghij1234567890klmnopqrstuvwxyz1234567890";
+
+// SECRET: Duffel Credentials
+// (=|>|:=|\|:|<=|=>|:)\s*duffel_(test|live)_(?i)[a-z0-9_-]{40,48}
+const duffelKey = "duffel_live_zxcv0987bnml6543asdf2109qwer8765tyuiop123456";
+
+
+// Dynatrace Credentials (bug 5683)
+// Dynatrace Credentials (bug 5683)
+// Dynatrace Credentials (bug 5683)
+// Dynatrace Credentials (bug 5683)
+// Dynatrace Credentials (bug 5683)
 
 // SECRET: Easypost Credentials
-const easypost_api_token = "EZAKozVPT4fxS2SVAXrzl7WlLy8q4qAHSS8O6QmCjU9svOUoHlCLNXDQGZ"
+// (?i)['"]EZ[APT]K[a-z0-9]{32,56}['"]
+const easyPostToken = "EZTKabcdefghij1234567890klmnopqrstuv1234567890abcdef";
+
+// SECRET: Easypost Credentials
+// (=|>|:=|\|:|<=|=>|:)\s*EZ[APT]K[a-z0-9]{32,56}
+const easyPostKey = "EZPKzxcv0987bnml6543asdf2109qwer8765tyuiop123456";
+
+
+// SECRET: Facebook Credentials
+// ((?i)(facebook[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([A-Za-z0-9]{24,48})['"]))
+const facebookToken = "abcd1234efgh5678ijkl9012mnop3456qrst7890uvwx";
+
+
+// SECRET: Fastly Credentials
+// (?i)fastly[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([A-Za-z0-9_\-\.+!=]{20,36})['"]
+const fastlyToken = "abcd1234efgh5678ijkl9012mnop3456qrst";
+
 
 // SECRET: Filezilla Credentials
-const filezilla = `
-      <User>testuser</User>
-      <Pass encoding="base64">ZkdJOWhuN2JLM3hQJDVtWXRaOHNRd0VyMkE2ZFZjTmpVNEBM</Pass>
-`
+// <Pass(?: encoding=\"base64\")?>[^<]+</Pass>
+const filezilla_password = '<Pass encoding="base64">U29tZUJhc2U2NERhdGE=</Pass>';
+
 
 // SECRET: Finicity Credentials
-const finicity_secret = "geruj4LFyu0NBeBOnQvo"
+// (?i)finicity[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-z0-9]{20})['"]
+const finicityToken = "1234567890acbdefghss";
 
-// SECRET: Go Cardless Credentials
-const gocardless_api_token = "live_Lw1tDIKwxVc1PpGnVsK2puGEuGh-A0d7Sbx-FAKE"
+// SECRET: Finicity Credentials
+// (?i)finicity[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-zA-Z0-9_\-+!]{80,120})['"]
+const finicityKey = "abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyzABCD1234EFGH5678IJKL9012MNOP3456QRST7890";
 
-// SECRET: Heroku Credentials
-const heroku_api_token = "d75c7509-1a26-4283-ba45-3e59df710b8f"
 
-// SECRET: Htpasswd Credentials
-const htpasswd = "ftnt-test:$apr1$KIPJuKo7$VgCmvIZGurXm3HRE0kgvS0"
+// SECRET: Flutterwave Credentials
+// ['"](FLW(PUB|SEC)K_TEST-(?i)[a-h0-9]{32}-X)['\"']
+const flutterwave_secret_1 = "FLWSECK_TEST-abcdeabcde1234567890abcdeabcde12-X";
 
-// SECRET: Hubspot Credentials
-const hubspot_api_token = "91d91373-8e94-4872-893c-e7d080224a56"
+// SECRET: Flutterwave Credentials
+// (=|>|:=|\\|\\|:|<=|=>|:)\s*(FLW(PUB|SEC)K_TEST-(?i)[a-h0-9]{32}-X)
+const flutterwave_secret_2 = "FLWPUBK_TEST-abcdeabcde1234567890abcdeabcde12-X";
 
-// SECRET: Hugging Face Token Credentials
-const hugging_face_api_token = "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"
+// SECRET: Flutterwave Credentials
+// ['"](FLWSECK_TEST[a-h0-9]{12})["']
+const flutterwave_secret_3 = "FLWSECK_TESTabcdeabcde12";
 
-// SECRET: Ionic Credentials
-const ionic_api_token = "ion_CB36LmTFigrX18IMtcRlLvs6HfhUSaHmOuNl3fvQmn"
+// SECRET: Flutterwave Credentials
+// (=|>|:=|\\|\\|:|<=|=>|:)\s*(FLWSECK_TEST[a-h0-9]{12})
+const flutterwave_secret_4 = "FLWSECK_TESTabcdeabcde12";
 
-// SECRET: Launchdarkly Token Credentials
-const launchdarkly_api_token = "api-44404887-8a6d-426e-9e81-27b1f6222222"
 
-// SECRET: Linear Credentials
-const linear_api_token = "lin_api_3thmgjor322griohzovh343LU7zvrdvdgT54T45G"
+// SECRET: Frame Io Credentials
+// ['"]fio-u-(?i)[a-z0-9-_=]{64}["']
+const frameio_secret_1 = "fio-u-abcdefghij1234567890ABCDEFGHIJabcdefghij1234567890ABCDEFGHIJ1234";
 
-// SECRET: Linkedin Credentials
-const linkedin_client_id = "86mn593uu0cjtm"
-// SECRET: Linkedin Credentials
-const linkedin_client_secret = "OSnVhWGxL8vxFL7g"
+// SECRET: Frame Io Credentials
+// (=|>|:=|\\|\\|:|<=|=>|:)\s*fio-u-(?i)[a-z0-9-_=]{64}
+const frameio_secret_2 = fio-u-abcdefghij1234567890ABCDEFGHIJabcdefghij1234567890ABCDEFGHIJ1234;
 
-// SECRET: Mailchimp Token Credentials
-const mailchimp_api_token = "ae54fcc23ade65fa404a65e78c56f898-us1"
 
-// SECRET: Mailgun Credentials
-const mailgun_api_token = "key-ae54fcc23ade65fa404a65e78c56f898"
+// SECRET: Gcp Credentials
+// (?s){[^}]*[\\\"]?type[\\\"]?\\s*:\\s*[\\\"]?service_account[\\\"]?[\\s\\S.]*?(private_key_id['\\\"]?\\s*\\:\\s*['\\\"]?[a-zA-Z0-9_$@\\-]+['\\\"]?)[^}]*?}
+const gcp_service_account_key =
+    {
+        "type": "service_account",
+        "project_id": "my-project",
+        "private_key_id": "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o1p2q3r4s5t6"
+    };
 
-// SECRET: Messagebird Credentials
-const messagebird_api_token = "z9mCSt5spXMqykDGYzReONZl8"
-
-// SECRET: Npm Access Credentials
-const npm_token = "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"
 
 // SECRET: Generic Password Credentials
-const password = "test-123"
+// (?i)(password|passwd|user_pwd)[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]{0,2}\s*(=|>|:=|\|:|<=|=>|:)\s*[']{1,2}([^\s\{}?%[\]]+)[']{1,2}
+const passwordToken = 'abcd1234efgh5678';
+
+// SECRET: Generic Password Credentials
+// (?i)(password|passwd|user_pwd)[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]{0,2}\s*(=|>|:=|\|:|<=|=>|:)\s*["]{1,2}([^\s\{}?%[\]]+)["]{1,2}
+const passwdKey = "zxcv0987bnml6543";
+
+// Exclude
+// (?i)(password|passwd|user_pwd)[a-z0-9_]*['\"]{0,2}\s*(=|>|:=|\||: |<=|=>|:)\s*((True|true|false|False|0|1)|['\"](True|true|false|False|0|1)['\"]|(['\"]{1,2}([^\s\{\}\?\%\[\]]+)['\"]{1,2}[\.]))
+const password = "1";
+
+
+// SECRET: Generic Secret Key Credentials
+// (?i)['"]?\bsecret[a-z0-9_]*key[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(:)\s*([A-Za-z0-9/+=]{16,128})
+const secretKeyToken = "abcd1234efgh5678ijkl9012";
+
+// SECRET: Generic Secret Key Credentials
+// (?i)['"]?\bsecret[a-z0-9_]*key[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|:=|=>|:)\s*['"]([a-zA-Z0-9_\-\.\$@*\^+!\[\]\(\)^=]{16,128})['"]
+const secretKeyQuoted = "zxcv0987bnml6543.asdf@123";
+
+// Excluded by: (?i)['"]?\bsecret[a-z0-9_]*key[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|:=|=>|:)\s*['"]\$([a-zA-Z0-9_\-\.\$@*\^+!\[\]\(\)^=]{15,128})['"]
+const secretKeyExcluded = "$zxcv0987bnml6543.asdf@123";
+
+
+// SECRET: Github Credentials
+// ['"]gh[pousr]_[0-9a-zA-Z]{32,40}['"]
+const github_token =  "ghp_abcdefghijABCDEFGHIJabcdefghij123456";
+
+// SECRET: Github Credentials
+// (=|>|:=|\||: |<=|=>|:)\s*gh[pousr]_[0-9a-zA-Z]{32,40}
+const github_token_raw = "ghs_abcdefghijABCDEFGHIJabcdefghij123456";
+
+// SECRET: Github Credentials
+// ['"]?github_pat_[0-9a-zA-Z_\-]{60,}['"]?
+const github_pat = "github_pat_abcdefghijABCDEFGHIJ1234567890abcdefghijABCDEFGHIJ1234567890abcdefghijABCDEFGHIJ12";
+
+
+// SECRET: Gitlab Credentials
+// ['"]gl(pat|cict)-[A-Za-z0-9_-]{20,}['"]
+const gitlab_token = "glpat-abcdefghijABCDEFGHIJabcdefghij123456";
+
+// SECRET: Gitlab Credentials
+// (=|>|:=|\||: |<=|=>|:)\s*gl(pat|cict)-[A-Za-z0-9_-]{20,}
+const gitlab_token_raw = "glcict-abcdefghijABCDEFGHIJabcdefghij123456";
+
+
+// SECRET: Go Cardless Credentials
+// ['"]live_(?i)[a-z0-9\-_=]{40}['"]
+const gocardless_token = "live_abcdefghijABCDEFGHIJabcdefghij1234567890";
+
+// SECRET: Go Cardless Credentials
+// (=|>|:=|\||: |<=|=>|:)\s*live_(?i)[a-z0-9\-_=]{40}
+const gocardless_token_raw = "live_abcdefghijABCDEFGHIJabcdefghij1234567890";
+
+
+// SECRET: Grafana Credentials
+// (?i)grafana[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?eyJrIjoi(?i)[a-z0-9\-_=]{72,126}['"]?
+const grafanaToken = "eyJrIjoiabcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890abcdef1234567890abcdefghij";
+
+// SECRET: Grafana Credentials
+// (?i)grafana[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?glsa_[a-zA-Z0-9_\-]{36,}['"]?
+const grafanaKey = "glsa_abcd1234efgh5678ijkl9012mnop3456qrst7890";
+
+
+// SECRET: Hashicorp Credentials
+// ['"](?i)[a-z0-9]{10,24}.atlasv1.[a-z0-9-_=]{60,70}["']
+const hashicorp_secret_1 = "abcdefghij.atlasv1.1234567890ABCDEFGHIJabcdefghij1234567890ABCDEFGHIJabcdefghij";
+
+// SECRET: Hashicorp Credentials
+// (=|>|:=|\\|\\|:|<=|=>|:)\s*(?i)[a-z0-9]{10,24}\\.atlasv1\\.[a-z0-9\\-_=]{60,70}
+const hashicorp_secret_2 = abcdefghij.atlasv1.1234567890ABCDEFGHIJabcdefghij1234567890ABCDEFGHIJabcdefghij;
+
+// SECRET: Hashicorp Credentials
+// ['"]tfp_[A-Za-z0-9]{20,40}["']
+const hashicorp_secret_3 = "tfp_abcdefghij1234567890ABCD";
+
+// SECRET: Hashicorp Credentials
+// (=|>|:=|\\|\\|:|<=|=>|:)\s*tfp_[A-Za-z0-9]{20,40}
+const hashicorp_secret_4 : tfp_abcdefghij1234567890ABCD;
+
+
+// SECRET: Heroku Credentials
+// (?i)heroku[a-z0-9_\]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?([0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12})['"]?
+const herokuToken = "12345678-abcd-1234-abcd-1234567890ab";
+
+// SECRET: Heroku Credentials
+// (?i)heroku[a-z0-9_\]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?(HRKU-[a-zA-Z0-9\_\-=+]{48,72})['"]?
+const herokuHrkToken = "HRKU-abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890abcd";
+
+// SECRET: Heroku Credentials
+// (?i)heroku[a-z0-9_\]*key[a-z0-9_\]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?([A-Za-z0-9/+=]{16,48})['"]?
+const herokuKey = "abcd1234efgh5678ijkl9012";
+
+
+// SECRET: Htpasswd Credentials
+// ^[a-zA-Z0-9_-]+:\$apr1\$[A-Za-z0-9./]{8}\$[A-Za-z0-9./]{22}$
+const htpasswdValue = "user1:$apr1$abcdefgh$1234567890123456789012";
+
+// SECRET: Htpasswd Credentials
+// (?i)[a-z0-9_]*htpasswd[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?([a-zA-Z0-9_-]+:\$apr1\$[A-Za-z0-9./]{8}\$[A-Za-z0-9./]{22})['"]?
+const userHtpasswd = "admin:$apr1$ijklmnop$0987654321098765432109";
+
+
+// SECRET: Http Auth Header Credentials
+// (?i)Authorization[\\]?['"]?\s*(=|:=|:|=>)\s*[\\]?['"]?Basic\s+[A-Za-z0-9+/]{16,}={0,2}['"]?
+const authHeaderBasic = "Authorization: Basic YWRtaW46c2VjdXJlcGFzczEyMw==";
+
+// SECRET: Http Auth Header Credentials
+// (?i)Authorization[\\]?['"]?\s*(=|:=|:|=>)\s*[\\]?['"]?Bearer\s+([A-Za-z0-9-._~+/]{20,})\s*['"]?
+const authHeaderBearer = "Authorization: Bearer abcdefghijklmnopqrst1234567890";
+
+
+// SECRET: Hubspot Credentials
+// (?i)hubspot[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})['"]
+const hubspotToken = "abcd1234-efgh-5678-ijkl-9012mnop3456";
+
+// SECRET: Hubspot Credentials
+// (?i)hubspot[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]pat-[a-z0-9]{1,4}-[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}['"]
+const hubspotPat = "pat-ab12-abcd1234-efgh-5678-ijkl-9012mnop3456";
+
+
+// SECRET: Hugging Face Token Credentials
+// ['"](hf_|api_org_|hf_app_)[a-zA-Z0-9]{30,64}['"]
+const huggingFaceToken = "hf_abcd1234efgh5678ijkl9012mnop3456";
+
+// SECRET: Hugging Face Token Credentials
+// (=|>|:=|\|:|<=|=>|:)\s*(hf_|api_org_|hf_app_)[a-zA-Z0-9]{30,64}
+const huggingFaceKey = api_org_1234567890abcdefeior1234567890ab;
+
+
+// SECRET: Intercom Credentials
+// (?i)intercom[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([A-Za-z0-9=\-_]{48,72})['"]
+const intercomToken = "abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890abcdefghij";
+
+// SECRET: Intercom Credentials
+// (?i)intercom[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-h0-9]{8}-[a-h0-9]{4}-[a-h0-9]{4}-[a-h0-9]{4}-[a-h0-9]{12})['"]
+const intercomUuid = "abcd1234-efgh-5678-abcd-9012efgh3456";
+
+
+// SECRET: Ionic Credentials
+// (?i)ionic[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"](ion_[A-Za-z0-9]{32,45})['"]
+const ionicToken = "ion_abcd1234efgh5678ijkl9012mnop3456qrst";
+
+
+// SECRET: Jekyll Token Credentials
+// (?i)[a-z0-9_]*jekyll[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*[a-zA-Z0-9]{24,}
+const jekyllToken = abcd1234efgh5678ijkl9012mnop3456;
+
+// SECRET: Jekyll Token Credentials
+// (?i)[a-z0-9_]*jekyll[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"][a-zA-Z0-9]{24,}['"]
+const jekyllKey = "1234567890abcdef1234567890abcdef";
+
+
+// SECRET: Jwt Token Credentials
+// \b(?i)jwt[a-z0-9_]*['"]?\s*(=|:|=>|:=)\s*['"]([A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+)['"]
+const jwtToken = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
+
+// SECRET: Jwt Token Credentials
+// eyJ[a-zA-Z0-9_\-]+\.(eyJ[A-Za-z0-9-_]+)\.[A-Za-z0-9-_]+
+const jwtAuth = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
+
+// SECRET: Jwt Token Credentials
+// eyJ[a-zA-Z0-9_\-]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+
+const jwtExtended = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIn0.abcd1234.efgh5678.ijkl9012";
+
+
+// SECRET: Launchdarkly Token Credentials
+// ['"]api-[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}['"]
+const launchDarklyToken = "api-abcd1234-efgh-5678-ijkl-9012mnop3456";
+
+// SECRET: Launchdarkly Token Credentials
+// ['"]api-[a-f0-9]{32}['"]
+const launchDarklyKey = "api-abcdef0123456789abcdef0123456789";
+
+// SECRET: Launchdarkly Token Credentials
+// (=|>|:=|\|:|<=|=>|:)\s*api-[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}
+const launchDarklyUuid = api-abcd1234-efgh-5678-ijkl-9012mnop3456;
+
+// SECRET: Launchdarkly Token Credentials
+// (=|>|:=|\|:|<=|=>|:)\s*api-[a-f0-9]{32}
+const launchDarklyHex = api-1234567890abcdef1234567890abcdef;
+
+
+// SECRET: Linear Credentials
+// ['"]lin_api_[A-Za-z0-9]{32,44}['"]
+const linearApiToken = "lin_api_abcd1234efgh5678ijkl9012mnop3456";
+
+// SECRET: Linear Credentials
+// (=|>|:=|\|:|<=|=>|:)\s*lin_api_[A-Za-z0-9]{32,44}
+const linearApiKey = lin_api_1234567890abcdef1234567890abcdef;
+
+// SECRET: Linear Credentials
+// (?i)linear[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-f0-9]{28,44})['"]
+const linearToken = "abcdef0123456789abcdef0123456789";
+
+
+// SECRET: Linkedin Credentials
+// (?i)linkedin[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((?i)[a-z0-9_\.=+!-]{14,64})['"]
+const linkedinToken = "abcd1234efgh5678_ijkl9012.mnop=qr+st";
+
+
+// SECRET: Lob Credentials
+// (?i)lob[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((live|test)_[a-f0-9]{28,38})['"]
+const lobToken = "live_abcdef0123456789abcdef0123456789";
+
+// SECRET: Lob Credentials
+// (?i)lob[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((live|test)_pub_[a-f0-9]{28,35})['"]
+const lobPubToken = "live_pub_1234567890abcdef1234567890ab";
+
+
+// SECRET: Mailchimp Token Credentials
+// (?i)[a-z0-9_]*mailchimp[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*[a-zA-Z0-9]{24,42}-us[0-9]{1,3}
+const mailchimpToken = abcd1234efgh5678ijkl9012mnop3456-us12;
+
+// SECRET: Mailchimp Token Credentials
+// (?i)[a-z0-9_]*mailchimp[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"][a-zA-Z0-9]{24,42}-us[0-9]{1,3}['"]
+const mailchimpKey = "1234567890abcdef1234567890abcdef-us12";
+
+
+// SECRET: Mailgun Credentials
+// (?i)mailgun[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((pub)?key-[a-f0-9]{32})['"]
+const mailgunToken = "key-abcdef0123456789abcdef0123456789";
+
+// SECRET: Mailgun Credentials
+// (?i)mailgun[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-h0-9]{32}-[a-h0-9]{8}-[a-h0-9]{8})['"]
+const mailgunKey = "abcdef0123456789abcdef0123456789-abcdefgh-abcdefgh";
+
+
+// SECRET: Mapbox Credentials
+// (?i)(pk\.[a-z0-9\-_]{54,100}\.[a-z0-9\-_]{16,32})
+const mapboxToken = "pk.abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890ab.abcdefghijklmnop";
+
+
+// SECRET: Messagebird Credentials
+// (?i)messagebird[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((?i)[a-z0-9]{20,48})['"]
+const messagebirdToken = "abcd1234efgh5678ijkl9012mnop3456";
+
+// SECRET: Messagebird Credentials
+// (?i)messagebird[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((?i)[a-h0-9]{8}-[a-h0-9]{4}-[a-h0-9]{4}-[a-h0-9]{4}-[a-h0-9]{12})['"]
+const messagebirdUuid = "abcd1234-efgh-5678-abcd-9012efgh3456";
+
+
+// SECRET: Mongodb Connection String Credentials
+// \bmongodb(?:\+srv)?:\/\/(?!<)[^\s:@\/]+:[^\s:@\/]+@[^\s]+
+const mongoDbConnection = "mongodb://admin:securepass123@cluster0.mongodb.net";
+
+
+// SECRET: Mysql Connection String Credentials
+// (?i)`?(mysql|jdbc:mysql)://((?!{.*})[^\s:@/]+)(:((?!{.*})[^\s:@/]+))?@[^\\s:/]+(:[^\\s/]+)?/((?!{.*})[^\\s?]+)`?
+const mysqlConnection = "mysql://admin:securepass123@localhost:3306/mydb";
+
+// SECRET: Mysql Connection String Credentials
+// (?i)`?(mysql|jdbc:mysql)://[^\\s:/]+(:[^\\s/]+)?/((?!{.*})[^\\s?]+)\?.*?((user=((?!{.*})[^&\s]+))|(password=((?!{.*})[^&\s]+)))
+const mysqlConnectionParams = "mysql://localhost:3306/mydb?user=admin&password=securepass123";
+
+
+// SECRET: New Relic Credentials
+// NRAK-[A-Z0-9]{16,30}\b
+const newRelicApiKey = "NRAK-XYZ78901PQR23456STUV";
+
+// SECRET: New Relic Credentials
+// NRJS-[a-z0-9]{16,30}\b
+const newRelicJsKey = "NRJS-xyzw7890pqrs1234tuv";
+
+// SECRET: New Relic Credentials
+// NRBR-[a-z0-9]{16,30}\b
+const newRelicBrowserKey = "NRBR-9012345678xyzab12345";
+
+// SECRET: New Relic Credentials
+// (?i)newrelic[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((?i)[a-z0-9\-_]{44,82})['"]
+const newRelicToken = "xyzw7890-pqrs1234-tuv5678-abcd9012-efgh3456-jklm";
+
+
+// SECRET: Npm Access Credentials
+// ['"]npm_(?i)[a-z0-9]{30,42}['"]
+const npmToken = "npm_abcdef0123456789ghijklmnop1234567890";
+
+
+// SECRET: Openai Token Credentials
+// ['"]sk-[a-zA-Z0-9]{25,50}['"]
+const openAiToken = "sk-abcd1234EFGH5678ijkl9012MNOP3456";
+
+// SECRET: Openai Token Credentials
+// (=|>|:=|\|:|<=|=>|:)\s*sk-[a-zA-Z0-9]{25,50}
+const openAiKey = sk-12345678abcdEFGH9012ijklMNOP3456;
+
+
+// SECRET: P12 Credentials
+// \.p12\s*(=|:=|:|=>|)\s*['"]([a-zA-Z0-9\-_./]{24,})['"]
+const p12Cert = "cert.p12=abcd1234-efgh5678_ijkl9012.mnop3456";
+
+// SECRET: P12 Credentials
+// \.p12\s*(=|:=|:|=>|)\s*([a-zA-Z0-9\-_./]{24,})
+const p12Path = cert.p12=12345678-abcd9012_efgh3456.ijkl7890;
+
+
+// SECRET: Paypal Credentials
+// (?i)paypal[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-zA-Z0-9\-_]{24,84})['"]
+const paypalToken = "abcd1234EFGH5678_ijkl9012-MNOP3456";
+
+// SECRET: Paypal Credentials
+// ['"]A21A[A-Za-z0-9-_]{92}['"]
+const paypalApiKey = "A21A90123456XYZW7890abcd1234EFGH5678ijkl9012MNOPqrst3456UVWXyzab7890CDEF1234ghij5678klmn90122222";
+
+// SECRET: Paypal Credentials
+// (=|>|:=|\|:|<=|=>|:)\s*A21A[A-Za-z0-9-_]{92}
+const paypalApiSecret = A21A90123456XYZW7890abcd1234EFGH5678ijkl9012MNOPqrst3456UVWXyzab7890CDEF1234ghij5678klmn90122222;
+
 
 // SECRET: Planetscale Credentials
-const planetscale_api_token = "pscale_tkn_m_ABffR3bVXQn83xueOUpYrJlA3V7DfnoTVaaSlHCyZ"
+// ['"]pscale_pw_(?i)[a-z0-9\-_\.]{36,52}['"]
+const planetScaleKey = "pscale_pw_abcd1234-efgh5678_ijkl9012.mnop3456qrst";
+
+// SECRET: Planetscale Credentials
+// ['"]pscale_tkn_(?i)[a-z0-9\-_\.]{36,52}['"]
+const planetScaleToken = "pscale_tkn_12345678-abcd9012_efgh3456.ijkl7890mnop";
+
+
+// SECRET: Postgresql Connection String Credentials
+// (?i)`?(postgres|jdbc:postgresql|postgresql)\:\/\/[^\s\:@\/]+(\:[^{}\s\:@\/]+)@[^{}\s\:\/]+(\:[^{}\s\/]+)?\/[^{}\s?]+`?
+const postgresConnection = "postgres://admin:secure123@localhost:5432/mydb";
+
+// SECRET: Postgresql Connection String Credentials
+// (?i)`?(postgres|jdbc:postgresql|postgresql)\:\/\/[^\s\:\/]+(\:[^\s\/]+)?\/((?!{.*})[^\s?]+)\?.*?((user=((?!{.*})[^&\s]+))|(password=((?!{.*})[^&\s]+)))
+const postgresConnectionParams = "postgres://localhost:5432/mydb?user=admin&key=secure123";
+
+
+// SECRET: Postman Api Credentials
+// PMAK-(?i)[a-f0-9]{24}-[a-f0-9]{34}\b
+const postman_api_key = "PMAK-abcdefabcd12345678901234-1234567890abcdefabcd1234567890abcd";
+
 
 // SECRET: Pulumni Api Credentials
-const pulumi_api_token = "pul-18e13e3eebebeb94eac318d421ca8ecc5ca78d5f"
+// pul-[a-f0-9]{40}\\b
+const pulumni_api_key = "pul-abcdeabcde1234567890abcdeabcde1234567890";
+
 
 // SECRET: Putty Key Credentials
-const putty_private_key = `
-PuTTY-User-Key-File-3: ssh-rsa
-Encryption: none
-Comment: rsa-key-20250424
-Public-Lines: 6
-AAAAB3NzaC1yc2EAAAADAQABAAABAQCXNYej5+imPHYnBOOl2f+dbMcOC+f/fTgx
-hHjbav37Y6WuTcMYv9Sjtf8bJWFZJ24f4S47kpFMquEYOv4TX6SzbdHl0pJNGxAr
-pkji+XkwHlxOxNPHKsn8QESke+SyUalU2RdPc4ofSW+r38V/5mneswjwj84Y9EIa
-nI4kOVqGfNn//SoXZDhQg5fApG1RGIM1w82YJWFmJcsKAiPAp81o8Fu51WFr9KV/
-qW2tfGb1NOhufE6MLlekBWDwC0bPzIMtO7UhZghIDMYZaHaE3yXNYzfh7KnqPMUx
-nMM76SYK00g+jFtfaDRBCCISreRPesJjUJ4fzT4PFcOkXVRw+/Xr
-Private-Lines: 14
-AAABABH5xCFBHZA9mdIzq5h43QFrABL0aWUfDsIcPH3hL0ZmZzjcd7gGfhHkPeqN
-PBBsNpRFochlOS7DFbVatf+5nAvUn2JR8SCHehmmT/3jqHuG8HRQw9hmhtKdFUv0
-ipCEUrwKftHsK1xiz4rANGtrCeT2pbZrchXXW9BsEh3OT6uzFzHnbmRGwfuSXdYx
-KjnH4PIGVtw6u0pwZzgeUvIfyspYmKoQwqqCriPLk66tXjmV7d2ROLC0K5npMUDt
-nwumPY6opMEkn3L7xw4Ij/y4VN6q5Az8vHnW69VC9bWxq642ZI+LWV0IH4BGPp53
-/zvQxcdHwIy1wvvEzdB7b3I3EgkAAACBAMhwHz5P1/gsDvkewyuLOXQhmY3CbW8i
-CUHYzxuGCinNByxtJvy59jYXHfV/jJbTto7Bv6DvISY8NeWmWE5GJsoGWmJvMeZS
-sfAtWYUWkH6RFIwxrCzzsNhbFfew0PslwstxcsDJv2sbj+k1+Gi93/gex77fiYKe
-sd5Bx1Ku1o7lAAAAgQDBH+41hf2Js5u1MA7qme+pUcPmLak91bebJgrghXFqGixQ
-bpPBBMC9EfB152NYsSVBmyeoIOq/UYGic3/HPbwopNHmGyQcc32qD/PNJVnfGE1l
-//DKjkYUMkYp27/U8OQabNPqBhW6DSE/1mmnvJVQ63iMCc7U/EaIx9jxHFNUjwAA
-AIEAgeVYhiqEYguEwMxorB2Qt3FCWfomwNtjk9zNHEEKSQseSH77U+QtlgVDb5ow
-Y+iiFdCZxTrG9nHr0hdIYHLamaCmDNdW6bsbZXJalxKz8bcYI5tuyn09HTIaeQM3
-ci9XREjeQHVLeGy9085ABbw/aoVNqyKLVTlQ3VaVWETQHy4=
-Private-MAC: 55431232673d8c2d05bb8b569a1b33820591b9f95e347c1a875fb45223e3a84f
-`
+// (?si)PuTTY-User-Key-File-\\d+: \\S+\\s+((?![\"]).)*?Private-Lines: [0-9]+(?:\\s+[A-Za-z0-9+/=]+)+(?:\\s+Private-MAC: [a-f0-9]+)?
+const putty_key = "PuTTY-User-Key-File-3: ssh-rsa\nEncryption: none\nComment: user@host\nPrivate-Lines: 2\nabcdefghij1234567890ABCDEFGHIJ1234567890==\nabcdefghij1234567890ABCDEFGHIJ1234567890==\nPrivate-MAC: 1234567890abcdef1234567890abcdef1234567890";
+
+// SECRET: Putty Key Credentials
+// ['\""](?si)PuTTY-User-Key-File-\\d+:[^'\""]*Private-Lines: [0-9]+[^'\""]*Private-MAC: [a-f0-9]+['\""]
+const putty_key = "PuTTY-User-Key-File-3: ssh-rsa\nEncryption: none\nComment: user@host\nPrivate-Lines: 2\nabcdefghij1234567890ABCDEFGHIJ1234567890==\nabcdefghij1234567890ABCDEFGHIJ1234567890==\nPrivate-MAC: 1234567890abcdef1234567890abcdef1234567890";
+
+
+// SECRET: Pypi Credentials
+// ['\""]pypi-AgEIcHlwaS5vcmc[A-Za-z0-9_-]{24,}['\""]
+const pypi_api_key = "pypi-AgEIcHlwaS5vcmcabcdefghij1234567890-_34";
+
+// SECRET: Pypi Credentials
+// (=|>|:=|\|\||:|<|<=|=>|:)\\s*pypi-AgEIcHlwaS5vcmc[A-Za-z0-9_-]{24,}
+const pypi_api_key = pypi-AgEIcHlwaS5vcmcabcdefghij1234567890ABCD-_;
+
 
 // SECRET: Rubygems Api Credentials
-const rubygems_api_token = "rubygems_123abc01a15f32b0be0103de4c9b3dcb3f2fea0fa8a84f23"
+// rubygems_[a-f0-9]{40,52}\\b
+const rubygems_api_key = "rubygems_abcdeabcde1234567890abcdeabcde1234567890";
+
 
 // SECRET: Sendgrid Api Credentials
-const sendgrid_api_token = "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"
+// SG\.(?i)[a-z0-9_\\-\\.]{54,78}\\b
+const sendgrid_api_key = "SG.abcdefghij1234567890abcdefghij1234567_-.abcdefghij1234";
+
 
 // SECRET: Sendinblue Api Credentials
-const sendinblue_api_token = "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"
+// xkeysib-[a-f0-9]{64}-(?i)[a-z0-9]{16}\\b
+const sendinblue_api_key = "xkeysib-abcdeabcde1234567890abcdeabcde1234567890abcdeabcde12345678901234-1234567890abcdef";
+
 
 // SECRET: Shippo Api Credentials
-const shippo_api_token = "shippo_live_d2892e09566bb71eec24ccc1bf0f9f9d9e208f39"
+// shippo_(live|test)_[a-f0-9]{36,48}\b
+const shippoApiKey = "shippo_test_ffeeddccbb9876543210ffeeddccbb9876543210";
+
 
 // SECRET: Shopify Credentials
-const shopify_token = "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"
+// ['\""]shp(ss|at|ca|pa)_[a-zA-Z0-9]{32}['\""]
+const shopify_api_key_1 = "shpat_abcdefghij1234567890ABCDEFGHIJ12";
+
+// SECRET: Shopify Credentials
+// (=|>|:=|\\|\\|:|<=|=>|:)\\s*shp(ss|at|ca|pa)_[a-zA-Z0-9]{32}
+const shopify_api_key_2 = shpss_abcdefghij1234567890ABCDEFGHIJ12;
+
+
+// SECRET: Slack Credentials
+// https://hooks.slack.com/services/[A-Za-z0-9+/]{40,}
+const slack_api_key_1 = "https://hooks.slack.com/services/abcdefghij1234567890ABCDEFGHIJ1234567890+/";
+
+// SECRET: Slack Credentials
+// ['\""]xox[baprs]-[0-9a-zA-Z\\-]{10,120}['\""]
+const slack_api_key_2 = "xoxb-abcdefghij1234567890ABCDEFGHIJ1234567890";
+
+// SECRET: Slack Credentials
+// (=|>|:=|\\|\\|:|<=|=>|:)\\s*xox[baprs]-[0-9a-zA-Z\\-]{10,120}
+const slack_api_key_3 = xoxa-abcdefghij1234567890ABCDEFGHIJ1234567890-;
+
 
 // SECRET: Stripe Credentials
-const stripe_secret_key = "sk_live_epISNGSkdeXov2frTey7RHAi"
+// (?i)stripe[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"](?i)(sk|pk)_(live|test)_[a-z0-9]{10,120}['"]
+const stripeApiKey1 = "sk_live_aabbccdeef0123456789";
+
+// SECRET: Stripe Credentials
+// (?i)stripe[a-z0-9_]*\s*(=|>|:=|\|:|<=|=>|:)\s*(?i)(sk|pk)_(live|test)_[a-z0-9]{10,120}
+const stripeApiKey2 = pk_test_0123456789aabbccdeef;
+
+// SECRET: Stripe Credentials
+// ['"]sk_(live|test)_[A-Za-z0-9]{10,32}['"]
+const stripeApiKey3 = "sk_live_AABBCCDDEF0123456789";
+
+// SECRET: Stripe Credentials
+// (=|>|:=|\|:|<=|=>|:)\s*sk_(live|test)_[A-Za-z0-9]{10,32}
+const stripeApiKey4 = sk_test_AABBCCDDEF0123456789;
+
+
+// SECRET: Twilio Credentials
+// ['"]SK[0-9a-fA-F]{32}['"]
+const twilioApiKey1 = "SKaabbccdeef0123456789abcdef01234567";
+
+// SECRET: Twilio Credentials
+// (=|>|:=|\|:|<=|=>|:)\s*SK[0-9a-fA-F]{32}
+const twilioApiKey2 = SKaabbccdeef0123456789abcdef01234567;
+
+// SECRET: Twilio Credentials
+// (?i)twilio[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([A-Za-z0-9+/]{24,50})['"]
+const twilioApiKey3 = "aabbccdeef0123456789abcd";
+
+
+// SECRET: Twitch Credentials
+// (?i)twitch[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"](?i)[a-z0-9]{24,36}['"]
+const twitchApiKey = "aabbccdeef0123456789aabbccdeef";
+
+
+// SECRET: Twitter Credentials
+// (?i)twitter[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([A-Za-z0-9+/\-_+]{24,64})['"]
+const twitterApiKey = "aabbccdeef0123456789abcdABCD12";
+
+
+// SECRET: Typeform Api Credentials
+// (?i)typeform[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"](tfp_[a-z0-9\-_\.=]{54,64})['"]
+const typeformApiKey = "tfp_aabbccdeef0123456789_.-=aabbccdeef0123456789_.-=aabbcc";
+
 
 // SECRET: Wordpress Auth Credentials
-const wordpress_auth_key = "define('AUTH_KEY', 'p832AQyZkfM|A+!e2u.T6O7|rz0]q~$bk<ZWyAIj9{sP?K^T81+x.Q.znF+ngJ(,')"
-// SECRET: Wordpress Auth Credentials
-const wordpress_auth_salt = "define('AUTH_SALT', '$!Hq1l!-q/@o<aOhc$7}&WMNVz_ZR+;/Y/{ mA,L;G:Yx2Aj!-WU|?ceo|b#|1/7')"
+// define(s*['"]*(DB_PASSWORD|MYSQL_PASSWORD|DB_PASS|DATABASE_PASSWORD)['"]*s*,s*['"][^'"]+['"]s*)
+const wordpress_api_key_1 = "define('DB_PASSWORD', 'abcdefghij1234567890ABCDEFGHIJ12!@#$')";
 
-// Zoom (Not Support yet)
-const zoom_token = "eyJzdiI6IjAwMDAwMiIsImFsZyI6IkhTNTEyIiwidiI6IjIuMCIsImtpZCI6IlpPT01fS0lEIn0.eyJhdWQiOiJodHRwczovL29hdXRoLnpvb20udXMiLCJ1aWQiOiJaT09NX1VTRVJfSUQiLCJ2ZXIiOjEwLCJhdWlkIjoiWk9PTV9BVUlEIiwibmJmIjoxNzQyNDkxNTAxLCJjb2RlIjoiWk9PTV9DT0RFIiwiaXNzIjoiem06Y2lkOlpPT01fQ0xJRU5UX0lEIiwiZ25vIjowLCJleHAiOjE3NDI0OTUxMDEsInR5cGUiOjMsImlhdCI6MTc0MjQ5MTUwMSwiYWlkIjoiWk9PTV9BQ0NPVU5UX0lEIn0.cxZI0GclFpT-5sn2WpmIqSrmL5pvbJAkFU2C8GbCrewDpj9RINyo0M4eMTfcts3kpUh-DwQOhtYyjhuSQrbXXA"
+// SECRET: Wordpress Auth Credentials
+// define(s*['"]*(AUTH_KEY|SECURE_AUTH_KEY|LOGGED_IN_KEY|NONCE_KEY|AUTH_SALT|SECURE_AUTH_SALT|LOGGED_IN_SALT|NONCE_SALT)['"]*s*,s*['"][^'"]+['"]s*)
+const wordpress_api_key_2 = "define('AUTH_KEY', 'abcdefghij1234567890ABCDEFGHIJ12!@#$')";
+
+
+// SECRET: Zoom Credentials
+// (?i)zoom[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\"]([a-zA-Z0-9\-_]{24,60})['\"]
+const zoom_token = "AbcdEFGH1234ijkl-5678MNOP_qrstUVWX90yz12";
