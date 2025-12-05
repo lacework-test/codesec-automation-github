@@ -1,55 +1,51 @@
-using System;
-
-public class SecretTest
-{
-    public static void Main(string[] args)
-    {
+public class SecretTest {
+    public static void main(String[] args) {
         // SECRET: Adobe Credentials
         // (?i)adobe[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"]([A-Za-z0-9]{32,40})['\\\"]
-        string adobeClientSecret = "AB12CD34EF56GH78JK90LM12NO34PQ56";
+        String adobeSecret = "AB12CD34EF56GH78JK90LM12NO34PQ56";
 
         // SECRET: Adobe Credentials
         // (?i)adobe[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"](p8e-)(?i)[a-z0-9\\-_=+]{28,64}['\\\"]
-        string adobe_token = "p8e-a1b2c3d4e5f6g7h8i9j0k1l2_m3n4+pq";
+        String adobeToken = "p8e-1a2b3c4d5e6f7g8h9i0_jk-lm+no_pq";
 
         // SECRET: Adobe Credentials
         // (=|>|:=|\\|\\|:|<=|=>|:)\\s*(p8e-)(?i)[a-z0-9\\-_=+]{28,64}
-        token = p8e-a1b2c3d4e5f6g7h8i9j0k1l2_m3n4+pq
+        token = p8e-1a2b3c4d5e6f7g8h9i0_jk-lm+no_pq
 
 
         // SECRET: Age Secret Key Credentials
         // ['\"]AGE-SECRET-KEY-[A-Za-z0-9]{54,}['\"]
-        string ageSecret = "AGE-SECRET-KEY-abcdefghijABCDEFGHIJ1234567890klmnopqrstKLMNOPQRST1234567890";
+        String ageSecret = "AGE-SECRET-KEY-abcdefghijABCDEFGHIJ1234567890klmnopqrstKLMNOPQRST1234567890";
 
         // SECRET: Age Secret Key Credentials
         // (=|>|:=|\|\|:|<=|=>|:)\s*AGE-SECRET-KEY-[A-Za-z0-9]{54,}
-        secret = AGE-SECRET-KEY-abcdefghijABCDEFGHIJ1234567890klmnopqrstKLMNOPQRST1234567890
+        token = AGE-SECRET-KEY-abcdefghijABCDEFGHIJ1234567890klmnopqrstKLMNOPQRST1234567890
 
 
         // SECRET: Alibaba Credentials
         // ['\"]LTAI[A-Za-z0-9]{12,32}['\"]
-        string alibabaKey = "LTAIabcdefghij1234567890klmnop";
+        String alibabaKey = "LTAIabcdefghij1234567890klmnop";
 
         // SECRET: Alibaba Credentials
         // (=|>|:=|\|\|:|<=|=>|:)\s*LTAI[A-Za-z0-9]{12,32}
-        alibaba_key = LTAIabcdefghij1234567890klmnop
+        alibaba_key = LTAIabcdefghij1234567890klmnop;
 
         // SECRET: Alibaba Credentials
         // (?i)alibaba[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\s*(=|>|:=|\\|\\|:|<=|=>|:)\s*['\\\"]([A-Za-z0-9+/=]{30,50})['\\\"]
-        string alibaba_secret = "alibabaABCDEFGHIJ1234567890klmnopqrstuv+/"
+        String alibaba_secret = "alibabaABCDEFGHIJ1234567890klmnopqrstuv+/";
 
 
         // SECRET: Asana Credentials
         // (?i)asana[a-z0-9_ .\\-,]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\\\"]([0-9]{16})['\\\"]
-        string asana_id = "1234567890123456";
+        String asanaID = "1234567890123456";
 
         // SECRET: Asana Credentials
         // (?i)asana[a-z0-9_ .\\-,]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\\\"]([a-z0-9]{32})['\\\"]
-        string asana_secret = "abcdefghij1234567890klmnopqrstuv";
+        String asanaSecret = "abcdefghij1234567890klmnopqrstuv";
 
 
         // SECRET: Asymmetric Encryption Credentials
-        string openSshPrivateKey =
+        String openSshPrivateKey =
         -----BEGIN OPENSSH PRIVATE KEY-----
         b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
         QyNTUxOQAAACAQ2rw9FnMxDHndk1CB1r3j17FMGB1sDhSXueP1oJOHPgAAAKBFZoirRWaI
@@ -59,7 +55,7 @@ public class SecretTest
         -----END OPENSSH PRIVATE KEY-----
 
         // SECRET: Asymmetric Encryption Credentials
-        string privateKey =
+        String privateKey =
         -----BEGIN PRIVATE KEY-----
         MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQ
         C5dZm6rVfRWcb0Ve6ZrNo1GL/QBLXqExnpvng9Pv9gzKdcfGvF
@@ -68,9 +64,11 @@ public class SecretTest
         UCHyhh4DlrDptHGYMtG40RQp3qupNkD9l5r72J2AT2/434xFJY
         -----END PRIVATE KEY-----
 
+
         // SECRET: Atlassian Credentials
+        // Atlassian Generic (24–192)
         // (?i)atlassian[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"]([a-zA-Z0-9+_/=\\-]{24,192})['\\\"]
-        string atlassian_key = "abcdefghijABCDEFGHIJ1234567890+/=--__1234567890";
+        String atlassianKey = "abcdefghijABCDEFGHIJ1234567890+/=--__1234567890";
 
 
         // Aws Credentials (bugs: 5682, 5683)
@@ -85,68 +83,66 @@ public class SecretTest
 
         // SECRET: Azure Credentials
         // (?i)azure[a-z0-9_ .\\-,]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"]([A-Za-z0-9+/=]{60,90})['\\\"]
-        string azure_secret = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+        String azure_secret = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
 
         // SECRET: Bcrypt Hash Credentials
-        // Bcrypt hash ($2a/$2b/$2x/$2y) with cost 04–31 (45–60 chars payload)
         // (?:^|[^A-Za-z0-9./])\$2[abxy]?\$(0[4-9]|[12][0-9]|3[0-1])?\$?[A-Za-z0-9./]{45,60}(?:$|[^A-Za-z0-9./])
-        string bcrypt_hash = "$2b$12$abcdefghijklmnopqrstuvABCDEFGHIJKLMNOPQRSTUVWXYZabcde";
+        String bcrypt_hash = "$2b$12$abcdefghijklmnopqrstuvABCDEFGHIJKLMNOPQRSTUVWXYZabcde";
 
 
         // SECRET: Beamer Credentials
         // (?i)beamer[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\"](b_[a-zA-Z0-9=_\-/+]{40,48})['\"]
-        string beamer_token = "b_AbCdEfGhIjKlMnOpQrStUvWxYz0123456789+/ABCD";
+        String beamerToken = "b_QwertyUIOPasdfghJKLZXCVBNM1234567890+=-/";
 
 
         // SECRET: Bitbucket Credentials
-        // (?i)bitbucket[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\"]([a-zA-Z0-9]{24,36})['\"]
-        string bitbucket_key = "Abcdefghijklmnopqrstuvwx123456";
+        // Short key (24–36 chars)
+        String bitbucket_key = "abcdefghij1234567890klmnopqrstuv";
 
         // SECRET: Bitbucket Credentials
-        // (?i)bitbucket[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\"]([a-zA-Z0-9_-]{50,70})['\"]
-        string bitbucket_token = "aBcD-1234567890_qwertyuiopasdfghjklzxcvbnmQWERTYAB";
+        // Long key (50–70 chars)
+        String bitbucket_token = "Xyz12-ABCDE_fghijklmnopqrstuvwxyz0987654321LMNOPQYZ";
 
 
         // SECRET: Clojars Credentials
         // (?i)(=|>|:=|\|\|:|<=|=>|:)\s*CLOJARS_[a-z0-9]{54,64}
-        string clojars_token = CLOJARS_abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234;
+        String clojars_token = CLOJARS_abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234;
 
         // SECRET: Clojars Credentials
         // (?i)['\"]CLOJARS_[a-z0-9]{54,64}['\"]
-        string clojars_token_quoted = "CLOJARS_abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234";
+        String clojars_token_quoted = "CLOJARS_abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234";
 
 
         // SECRET: Contentful Credentials
         // (?i)contentful[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\"]([a-z0-9-=_]{40,60})['\"]
-        string contentful_token = "contentful_abcdefghijklmnopqrstuvwxyz1234567890-=_";
+        String contentful_token = "contentful_abcdefghijklmnopqrstuvwxyz1234567890-=_";
 
 
         // SECRET: Databricks Credentials
         // ['\"]dapi[a-h0-9]{24,36}['\"]
-        string databricks_token = "dapi0123abcd4567efgh89a0bc1def2345678";
+        String databricks_token = "dapi0123abcd4567efgh89a0bc1def2345678";
 
         // SECRET: Databricks Credentials
         // (=|>|:=|\|\|:|<=|=>|:)\s*dapi[a-h0-9]{24,36}
-        string databricks_key = "dapiabcdef0123456789abcdef0123456789";
+        String databricks_key = "dapiabcdef0123456789abcdef0123456789";
 
 
         // SECRET: Digital Ocean Credentials
         // (?i)digital[a-z0-9_]*ocean[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\"]([a-f0-9]{60,68})['\"]
-        string digital_ocean_token = "abcdef123456abcdef123456abcdef123456abcdef123456abcdef123456abcdef12";
+        String digital_ocean_token = "abcdef012345abcdef012345abcdef012345abcdef012345abcdef012345abcd";
 
 
         // SECRET: Discord Credentials
         // (?i)discord[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"]([0-9]{14,32})['\\\"]
-        string discord_user_id = "123456789012345678";
+        String discord_user_id = "123456789012345678";
 
         // SECRET: Discord Credentials
         // (?i)discord[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"]([a-z0-9=_\\-\\.]{24,98})['\\\"]
-        string discord_token = "abcd1234_efgh5678-ijkl.mnopqrstu";
-
+        String discord_token = "abcd1234_efgh5678-ijkl.mnopqrstu";
 
         // SECRET: Docker Authentication Credentials
-        string dockerAuthConfig =
+        String dockerAuthConfig =
         {
           "auths": {
             "https://index.docker.io/v1/": {
@@ -156,36 +152,35 @@ public class SecretTest
           }
         }
 
-
         // SECRET: Doppler Credentials
         // ['\"](dp\.pt\.)(?i)[a-z0-9]{36,48}['\"]
-        string doppler_token = "dp.pt.abcd1234efgh5678ijkl9012mnop3456qrstuvwx";
+        String doppler_token = "dp.pt.abcd1234efgh5678ijkl9012mnop3456qrstuvwx";
 
         // SECRET: Doppler Credentials
         // (=|>|:=|\|\|:|<=|=>|:)\s*(dp\.pt\.)(?i)[a-z0-9]{36,48}
-        string dopplerKey = "dp.pt.zxcv0987bnml6543asdf2109qwer8765tyuiopgh";
+        String dopplerKey = "dp.pt.zxcv0987bnml6543asdf2109qwer8765tyuiopgh";
 
 
         // SECRET: Dropbox Credentials
-        // (?i)dropbox[a-z0-9_ .-,](?:[:\s]+)?(?:string|String|str)?['"]?\s(=|>|:=||:|<=|=>|:)\s*'"['"]
-        string dropboxApiSecret = "abcdefghijklmnop";
+        // (?i)dropbox[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-z0-9]{12,16})['"]
+        String dropboxApiSecret = "abcdefghijklmnop";
 
         // SECRET: Dropbox Credentials
-        // (?i)dropbox[a-z0-9_ .-,](?:[:\s]+)?(?:string|String|str)?['"]?\s(=|>|:=||:|<=|=>|:)\s*'"['"]
-        string dropboxShortLivedToken = "sl.ABCD1234efgh5678ijkl9012mnop3456qrstuvwxyzABCD1234efgh5678ijkl9012mnop3456qrstuvwxyzABCD1234efgh5678ijkl9012mnop3456qrstuvwxyz";
+        // (?i)dropbox[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"](sl\.[a-z0-9\-=_]{124,148})['"]
+        String dropboxShortLivedToken = "sl.ABCD1234efgh5678ijkl9012mnop3456qrstuvwxyzABCD1234efgh5678ijkl9012mnop3456qrstuvwxyzABCD1234efgh5678ijkl9012mnop3456qrstuvwxyz";
 
         // SECRET: Dropbox Credentials
-        // (?i)dropbox[a-z0-9_ .-,](?:[:\s]+)?(?:string|String|str)?['"]?\s(=|>|:=||:|<=|=>|:)\s*['"][a-z0-9]{11}(AAAAAAAAAA)[a-z0-9-_=]{40,48}['"]
-        string dropbox = "1234567890aAAAAAAAAAA12345678901234567890abcdefghijabcdefghij";
+        // (?i)dropbox[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"][a-z0-9]{11}(AAAAAAAAAA)[a-z0-9\-_=]{40,48}['"]
+        String dropbox = "1234567890aAAAAAAAAAA12345678901234567890abcdefghijabcdefghij";
 
 
         // SECRET: Duffel Credentials
         // ['"](duffel_(test|live)_(?i)[a-z0-9_-]{40,48})['"]
-        string duffelToken = "duffel_test_abcdefghij1234567890klmnopqrstuvwxyz1234567890";
+        String duffelToken = "duffel_test_abcdefghij1234567890klmnopqrstuvwxyz1234567890";
 
         // SECRET: Duffel Credentials
         // (=|>|:=|\|:|<=|=>|:)\s*duffel_(test|live)_(?i)[a-z0-9_-]{40,48}
-        string duffelKey = "duffel_live_zxcv0987bnml6543asdf2109qwer8765tyuiop123456";
+        String duffelKey = "duffel_live_zxcv0987bnml6543asdf2109qwer8765tyuiop123456";
 
 
         // Dynatrace Credentials (bug 5683)
@@ -196,26 +191,26 @@ public class SecretTest
 
         // SECRET: Easypost Credentials
         // (?i)['"]EZ[APT]K[a-z0-9]{32,56}['"]
-        string easyPostToken = "EZTKabcdefghij1234567890klmnopqrstuv1234567890abcdef";
+        String easyPostToken = "EZTKabcdefghij1234567890klmnopqrstuv1234567890abcdef";
 
         // SECRET: Easypost Credentials
         // (=|>|:=|\|:|<=|=>|:)\s*EZ[APT]K[a-z0-9]{32,56}
-        string easyPostKey = "EZPKzxcv0987bnml6543asdf2109qwer8765tyuiop123456";
+        String easyPostKey = "EZPKzxcv0987bnml6543asdf2109qwer8765tyuiop123456";
 
 
         // SECRET: Facebook Credentials
         // (?i)(facebook|fb)[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"]EAA(?<TOKEN>[A-Za-z0-9]{24,48})['\\\"]
-        string facebookToken = "EAAa1B2c3D4e5F6g7H8i9J0kLmNoPqRstUvWxYz";
+        String facebookToken = "EAAa1B2c3D4e5F6g7H8i9J0kLmNoPqRstUvWxYz";
 
 
         // SECRET: Facebook Credentials
         // (?i)(facebook|fb)[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"]?\\bEAA(?<TOKEN>[A-Za-z0-9]{20,255})['\\\"]?
-        string facebookToken = "EAAabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJ";
+        String facebookToken = "EAAabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJ";
 
 
         // SECRET: Fastly Credentials
         // (?i)fastly[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([A-Za-z0-9_\-\.+!=]{20,36})['"]
-        string fastlyToken = "abcd1234efgh5678ijkl9012mnop3456qrst";
+        String fastlyToken = "abcd1234efgh5678ijkl9012mnop3456qrst";
 
 
         // SECRET: Filezilla Credentials
@@ -225,28 +220,28 @@ public class SecretTest
 
         // SECRET: Finicity Credentials
         // (?i)finicity[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-z0-9]{20})['"]
-        string finicityToken = "1234567890acbdefghss";
+        String finicityToken = "1234567890acbdefghss";
 
         // SECRET: Finicity Credentials
         // (?i)finicity[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-zA-Z0-9_\-+!]{80,120})['"]
-        string finicityKey = "abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyzABCD1234EFGH5678IJKL9012MNOP3456QRST7890";
+        String finicityKey = "abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyzABCD1234EFGH5678IJKL9012MNOP3456QRST7890";
 
 
         // SECRET: Flutterwave Credentials
-        // ['"](FLW(PUB|SEC)K_TEST-(?i)[a-h0-9]{32}-X)['"]
-        string flutterwavePubToken = "FLWPUBK_TEST-012345678901234567890123456789ab-X";
+        // ['"](FLW(PUB|SEC)K_TEST-(?i)[a-h0-9]{32}-X)['\"']
+        var flutterwave_secret_1 = "FLWSECK_TEST-abcdeabcde1234567890abcdeabcde12-X";
 
         // SECRET: Flutterwave Credentials
-        // (=|>|:=|\|:|<=|=>|:)\s*(FLW(PUB|SEC)K_TEST-(?i)[a-h0-9]{32}-X)
-        string flutterwaveSecToken = "FLWSECK_TEST-012345678901234567890123456789ab-X";
+        // (=|>|:=|\\|\\|:|<=|=>|:)\s*(FLW(PUB|SEC)K_TEST-(?i)[a-h0-9]{32}-X)
+        var flutterwave_secret_2 = "FLWPUBK_TEST-abcdeabcde1234567890abcdeabcde12-X";
 
         // SECRET: Flutterwave Credentials
-        // ['"](FLWSECK_TEST[a-h0-9]{12})['"]
-        string flutterwaveShortToken = "FLWSECK_TESTabcdef012345";
+        // ['"](FLWSECK_TEST[a-h0-9]{12})["']
+        var flutterwave_secret_3 = "FLWSECK_TESTabcdeabcde12";
 
         // SECRET: Flutterwave Credentials
-        // (=|>|:=|\|:|<=|=>|:)\s*(FLWSECK_TEST[a-h0-9]{12})
-        string flutterwaveShortKey = "FLWSECK_TEST123456abcdef";
+        // (=|>|:=|\\|\\|:|<=|=>|:)\s*(FLWSECK_TEST[a-h0-9]{12})
+        var flutterwave_secret_4 = "FLWSECK_TESTabcdeabcde12";
 
 
         // SECRET: Frame Io Credentials
@@ -261,69 +256,75 @@ public class SecretTest
         // SECRET: Gcp Credentials
         // (?s){[^}]*[\\\"]?type[\\\"]?\\s*:\\s*[\\\"]?service_account[\\\"]?[\\s\\S.]*?(private_key_id['\\\"]?\\s*\\:\\s*['\\\"]?[a-zA-Z0-9_$@\\-]+['\\\"]?)[^}]*?}
         var gcp_service_account_key =
-        {
-            "type": "service_account",
+            {"type": "service_account",
             "project_id": "my-project",
             "private_key_id": "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o1p2q3r4s5t6"
-        };
+            };
 
 
         // SECRET: Generic Password Credentials
         // (?i)(password|passwd|user_pwd)[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]{0,2}\s*(=|>|:=|\|:|<=|=>|:)\s*[']{1,2}([^\s\{}?%[\]]+)[']{1,2}
-        string passwordToken = 'abcd1234efgh5678';
+        String passwordToken = 'abcd1234efgh5678';
 
         // SECRET: Generic Password Credentials
         // (?i)(password|passwd|user_pwd)[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]{0,2}\s*(=|>|:=|\|:|<=|=>|:)\s*["]{1,2}([^\s\{}?%[\]]+)["]{1,2}
-        string passwdKey = "zxcv0987bnml6543";
+        String passwdKey = "zxcv0987bnml6543";
 
         // Exclude
-        // (?i)(password|passwd|user_pwd)[a-z0-9_]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]{0,2}\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*((True|true|false|False|0|1)|['\\\"](True|true|false|False|0|1)['\\\"]|(['\\\"]{1,2}([^\\s\\{\\}\\?\\%\\[\\]]+)['\\\"]{1,2}[\\.]))
-        string password = "true";
+        // (?i)(password|passwd|user_pwd)[a-z0-9_]*['\"]{0,2}\s*(=|>|:=|\||: |<=|=>|:)\s*((True|true|false|False|0|1)|['\"](True|true|false|False|0|1)['\"]|(['\"]{1,2}([^\s\{\}\?\%\[\]]+)['\"]{1,2}[\.]))
+        String password = "False";
 
 
         // SECRET: Generic Secret Key Credentials
         // (?i)['"]?\bsecret[a-z0-9_]*key[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(:)\s*([A-Za-z0-9/+=]{16,128})
-        string secretKeyToken = "abcd1234efgh5678ijkl9012";
+        String secretKeyToken = "abcd1234efgh5678ijkl9012";
 
         // SECRET: Generic Secret Key Credentials
         // (?i)['"]?\bsecret[a-z0-9_]*key[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|:=|=>|:)\s*['"]([a-zA-Z0-9_\-\.\$@*\^+!\[\]\(\)^=]{16,128})['"]
-        string secretKeyQuoted = "zxcv0987bnml6543.asdf@123";
+        String secretKeyQuoted = "zxcv0987bnml6543.asdf@123";
 
         // Excluded by: (?i)['"]?\bsecret[a-z0-9_]*key[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|:=|=>|:)\s*['"]\$([a-zA-Z0-9_\-\.\$@*\^+!\[\]\(\)^=]{15,128})['"]
-        string secretKeyExcluded = "$zxcv0987bnml6543.asdf@123";
+        String secretKeyExcluded = "$zxcv0987bnml6543.asdf@123";
 
 
         // SECRET: Github Credentials
         // ['"]gh[pousr]_[0-9a-zA-Z]{32,40}['"]
-        string github_token = "ghp_abcdefghijABCDEFGHIJabcdefghij123456";
+        var github_token = "ghp_abcdefghijABCDEFGHIJabcdefghij123456";
 
         // SECRET: Github Credentials
         // (=|>|:=|\||: |<=|=>|:)\s*gh[pousr]_[0-9a-zA-Z]{32,40}
-        string github_token_raw = ghs_abcdefghijABCDEFGHIJabcdefghij123456;
+        var github_token_raw = "ghs_abcdefghijABCDEFGHIJabcdefghij123456";
 
         // SECRET: Github Credentials
         // ['"]?github_pat_[0-9a-zA-Z_\-]{60,}['"]?
-        string github_pat = "github_pat_abcdefghijABCDEFGHIJ1234567890abcdefghijABCDEFGHIJ1234567890abcdefghijABCDEFGHIJ12";
+        var github_pat = "github_pat_abcdefghijABCDEFGHIJ1234567890abcdefghijABCDEFGHIJ1234567890abcdefghijABCDEFGHIJ12";
+
+
+        // SECRET: Gitlab Credentials
+        // ['"]gl(pat|cict)-[A-Za-z0-9_-]{20,}['"]
+        var gitlab_token = "glpat-abcdefghijABCDEFGHIJabcdefghij123456";
+
+        // SECRET: Gitlab Credentials
+        // (=|>|:=|\||: |<=|=>|:)\s*gl(pat|cict)-[A-Za-z0-9_-]{20,}
+        var gitlab_token_raw = "glcict-abcdefghijABCDEFGHIJabcdefghij123456";
 
 
         // SECRET: Go Cardless Credentials
         // ['"]live_(?i)[a-z0-9\-_=]{40}['"]
-        var gocardless_token =
-            "live_abcdefghijABCDEFGHIJabcdefghij1234567890";
+        var gocardless_token = "live_abcdefghijABCDEFGHIJabcdefghij1234567890";
 
         // SECRET: Go Cardless Credentials
         // (=|>|:=|\||: |<=|=>|:)\s*live_(?i)[a-z0-9\-_=]{40}
-        var gocardless_token_raw =
-            live_abcdefghijABCDEFGHIJabcdefghij1234567890;
+        var gocardless_token_raw = "live_abcdefghijABCDEFGHIJabcdefghij1234567890";
 
 
         // SECRET: Grafana Credentials
         // (?i)grafana[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?eyJrIjoi(?i)[a-z0-9\-_=]{72,126}['"]?
-        string grafanaToken = "eyJrIjoiabcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890abcdef1234567890abcdefghij";
+        String grafanaToken = "eyJrIjoiabcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890abcdef1234567890abcdefghij";
 
         // SECRET: Grafana Credentials
         // (?i)grafana[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?glsa_[a-zA-Z0-9_\-]{36,}['"]?
-        string grafanaKey = "glsa_abcd1234efgh5678ijkl9012mnop3456qrst7890";
+        String grafanaKey = "glsa_abcd1234efgh5678ijkl9012mnop3456qrst7890";
 
 
         // SECRET: Hashicorp Credentials
@@ -345,250 +346,250 @@ public class SecretTest
 
         // SECRET: Heroku Credentials
         // (?i)heroku[a-z0-9_\]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?([0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12})['"]?
-        string herokuToken = "12345678-abcd-1234-abcd-1234567890ab";
+        String herokuToken = "12345678-abcd-1234-abcd-1234567890ab";
 
         // SECRET: Heroku Credentials
         // (?i)heroku[a-z0-9_\]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?(HRKU-[a-zA-Z0-9\_\-=+]{48,72})['"]?
-        string herokuHrkToken = "HRKU-abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890abcd";
+        String herokuHrkToken = "HRKU-abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890abcd";
 
         // SECRET: Heroku Credentials
         // (?i)heroku[a-z0-9_\]*key[a-z0-9_\]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?([A-Za-z0-9/+=]{16,48})['"]?
-        string herokuKey = "abcd1234efgh5678ijkl9012";
+        String herokuKey = "abcd1234efgh5678ijkl9012";
 
 
         // SECRET: Htpasswd Credentials
         // ^[a-zA-Z0-9_-]+:\$apr1\$[A-Za-z0-9./]{8}\$[A-Za-z0-9./]{22}$
-        string htpasswdValue = "user1:$apr1$abcdefgh$1234567890123456789012";
+        String htpasswdValue = "user1:$apr1$abcdefgh$1234567890123456789012";
 
         // SECRET: Htpasswd Credentials
         // (?i)[a-z0-9_]*htpasswd[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]?([a-zA-Z0-9_-]+:\$apr1\$[A-Za-z0-9./]{8}\$[A-Za-z0-9./]{22})['"]?
-        string userHtpasswd = "admin:$apr1$ijklmnop$0987654321098765432109";
+        String userHtpasswd = "admin:$apr1$ijklmnop$0987654321098765432109";
 
 
         // SECRET: Http Auth Header Credentials
         // (?i)Authorization[\\]?['"]?\s*(=|:=|:|=>)\s*[\\]?['"]?Basic\s+[A-Za-z0-9+/]{16,}={0,2}['"]?
-        string authHeaderBasic = "Authorization: Basic YWRtaW46c2VjdXJlcGFzczEyMw==";
+        String authHeaderBasic = "Authorization: Basic YWRtaW46c2VjdXJlcGFzczEyMw==";
 
         // SECRET: Http Auth Header Credentials
         // (?i)Authorization[\\]?['"]?\s*(=|:=|:|=>)\s*[\\]?['"]?Bearer\s+([A-Za-z0-9-._~+/]{20,})\s*['"]?
-        string authHeaderBearer = "Authorization: Bearer abcdefghijklmnopqrst1234567890";
+        String authHeaderBearer = "Authorization: Bearer abcdefghijklmnopqrst1234567890";
 
 
         // SECRET: Hubspot Credentials
         // (?i)hubspot[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})['"]
-        string hubspotToken = "abcd1234-efgh-5678-ijkl-9012mnop3456";
+        String hubspotToken = "abcd1234-efgh-5678-ijkl-9012mnop3456";
 
         // SECRET: Hubspot Credentials
         // (?i)hubspot[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]pat-[a-z0-9]{1,4}-[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}['"]
-        string hubspotPat = "pat-ab12-abcd1234-efgh-5678-ijkl-9012mnop3456";
+        String hubspotPat = "pat-ab12-abcd1234-efgh-5678-ijkl-9012mnop3456";
 
 
         // SECRET: Hugging Face Token Credentials
         // ['"](hf_|api_org_|hf_app_)[a-zA-Z0-9]{30,64}['"]
-        string huggingFaceToken = "hf_abcd1234efgh5678ijkl9012mnop3456";
+        String huggingFaceToken = "hf_abcd1234efgh5678ijkl9012mnop3456";
 
         // SECRET: Hugging Face Token Credentials
         // (=|>|:=|\|:|<=|=>|:)\s*(hf_|api_org_|hf_app_)[a-zA-Z0-9]{30,64}
-        string huggingFaceKey = api_org_1234567890abcdefeior1234567890ab;
+        String huggingFaceKey = api_org_1234567890abcdefeior1234567890ab;
 
 
         // SECRET: Intercom Credentials
         // (?i)intercom[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([A-Za-z0-9=\-_]{48,72})['"]
-        string intercomToken = "abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890abcdefghij";
+        String intercomToken = "abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890abcdefghij";
 
         // SECRET: Intercom Credentials
         // (?i)intercom[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-h0-9]{8}-[a-h0-9]{4}-[a-h0-9]{4}-[a-h0-9]{4}-[a-h0-9]{12})['"]
-        string intercomUuid = "abcd1234-efgh-5678-abcd-9012efgh3456";
+        String intercomUuid = "abcd1234-efgh-5678-abcd-9012efgh3456";
 
 
         // SECRET: Ionic Credentials
         // (?i)ionic[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"](ion_[A-Za-z0-9]{32,45})['"]
-        string ionicToken = "ion_abcd1234efgh5678ijkl9012mnop3456qrst";
+        String ionicToken = "ion_abcd1234efgh5678ijkl9012mnop3456qrst";
 
 
         // SECRET: Jekyll Token Credentials
         // (?i)[a-z0-9_]*jekyll[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*[a-zA-Z0-9]{24,}
-        string jekyllToken = abcd1234efgh5678ijkl9012mnop3456;
+        String jekyllToken = abcd1234efgh5678ijkl9012mnop3456;
 
         // SECRET: Jekyll Token Credentials
         // (?i)[a-z0-9_]*jekyll[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"][a-zA-Z0-9]{24,}['"]
-        string jekyllKey = "1234567890abcdef1234567890abcdef";
+        String jekyllKey = "1234567890abcdef1234567890abcdef";
 
 
         // SECRET: Jwt Token Credentials
         // \b(?i)jwt[a-z0-9_]*['"]?\s*(=|:|=>|:=)\s*['"]([A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+)['"]
-        string jwtToken = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
+        String jwtToken = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
 
         // SECRET: Jwt Token Credentials
         // eyJ[a-zA-Z0-9_\-]+\.(eyJ[A-Za-z0-9-_]+)\.[A-Za-z0-9-_]+
-        string jwtAuth = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
+        String jwtAuth = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
 
         // SECRET: Jwt Token Credentials
         // eyJ[a-zA-Z0-9_\-]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+
-        string jwtExtended = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIn0.abcd1234.efgh5678.ijkl9012";
+        String jwtExtended = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIn0.abcd1234.efgh5678.ijkl9012";
 
 
         // SECRET: Launchdarkly Token Credentials
         // ['"]api-[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}['"]
-        string launchDarklyToken = "api-abcd1234-efgh-5678-ijkl-9012mnop3456";
+        String launchDarklyToken = "api-abcd1234-efgh-5678-ijkl-9012mnop3456";
 
         // SECRET: Launchdarkly Token Credentials
         // ['"]api-[a-f0-9]{32}['"]
-        string launchDarklyKey = "api-abcdef0123456789abcdef0123456789";
+        String launchDarklyKey = "api-abcdef0123456789abcdef0123456789";
 
         // SECRET: Launchdarkly Token Credentials
         // (=|>|:=|\|:|<=|=>|:)\s*api-[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}
-        string launchDarklyUuid = api-abcd1234-efgh-5678-ijkl-9012mnop3456;
+        String launchDarklyUuid = api-abcd1234-efgh-5678-ijkl-9012mnop3456;
 
         // SECRET: Launchdarkly Token Credentials
         // (=|>|:=|\|:|<=|=>|:)\s*api-[a-f0-9]{32}
-        string launchDarklyHex = api-1234567890abcdef1234567890abcdef;
+        String launchDarklyHex = api-1234567890abcdef1234567890abcdef;
 
 
         // SECRET: Linear Credentials
         // ['"]lin_api_[A-Za-z0-9]{32,44}['"]
-        string linearApiToken = "lin_api_abcd1234efgh5678ijkl9012mnop3456";
+        String linearApiToken = "lin_api_abcd1234efgh5678ijkl9012mnop3456";
 
         // SECRET: Linear Credentials
         // (=|>|:=|\|:|<=|=>|:)\s*lin_api_[A-Za-z0-9]{32,44}
-        string linearApiKey = lin_api_1234567890abcdef1234567890abcdef;
+        String linearApiKey = lin_api_1234567890abcdef1234567890abcdef;
 
         // SECRET: Linear Credentials
         // (?i)linear[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-f0-9]{28,44})['"]
-        string linearToken = "abcdef0123456789abcdef0123456789";
+        String linearToken = "abcdef0123456789abcdef0123456789";
 
 
         // SECRET: Linkedin Credentials
         // (?i)linkedin[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((?i)[a-z0-9_\.=+!-]{14,64})['"]
-        string linkedinToken = "abcd1234efgh5678_ijkl9012.mnop=qr+st";
+        String linkedinToken = "abcd1234efgh5678_ijkl9012.mnop=qr+st";
 
 
         // SECRET: Lob Credentials
         // (?i)lob[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((live|test)_[a-f0-9]{28,38})['"]
-        string lobToken = "live_abcdef0123456789abcdef0123456789";
+        String lobToken = "live_abcdef0123456789abcdef0123456789";
 
         // SECRET: Lob Credentials
         // (?i)lob[a-z0-9_ .,-]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((live|test)_pub_[a-f0-9]{28,35})['"]
-        string lobPubToken = "live_pub_1234567890abcdef1234567890ab";
+        String lobPubToken = "live_pub_1234567890abcdef1234567890ab";
 
 
         // SECRET: Mailchimp Token Credentials
         // (?i)[a-z0-9_]*mailchimp[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*[a-zA-Z0-9]{24,42}-us[0-9]{1,3}
-        string mailchimpToken = abcd1234efgh5678ijkl9012mnop3456-us12;
+        String mailchimpToken = abcd1234efgh5678ijkl9012mnop3456-us12;
 
         // SECRET: Mailchimp Token Credentials
         // (?i)[a-z0-9_]*mailchimp[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"][a-zA-Z0-9]{24,42}-us[0-9]{1,3}['"]
-        string mailchimpKey = "1234567890abcdef1234567890abcdef-us12";
+        String mailchimpKey = "1234567890abcdef1234567890abcdef-us12";
 
 
         // SECRET: Mailgun Credentials
         // (?i)mailgun[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((pub)?key-[a-f0-9]{32})['"]
-        string mailgunToken = "key-abcdef0123456789abcdef0123456789";
+        String mailgunToken = "key-abcdef0123456789abcdef0123456789";
 
         // SECRET: Mailgun Credentials
         // (?i)mailgun[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([a-h0-9]{32}-[a-h0-9]{8}-[a-h0-9]{8})['"]
-        string mailgunKey = "abcdef0123456789abcdef0123456789-abcdefgh-abcdefgh";
+        String mailgunKey = "abcdef0123456789abcdef0123456789-abcdefgh-abcdefgh";
 
 
         // SECRET: Mapbox Credentials
         // (?i)(pk\.[a-z0-9\-_]{54,100}\.[a-z0-9\-_]{16,32})
-        string mapboxToken = "pk.abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890ab.abcdefghijklmnop";
+        String mapboxToken = "pk.abcd1234efgh5678ijkl9012mnop3456qrst7890uvwxyz1234567890ab.abcdefghijklmnop";
 
 
         // SECRET: Messagebird Credentials
         // (?i)messagebird[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((?i)[a-z0-9]{20,48})['"]
-        string messagebirdToken = "abcd1234efgh5678ijkl9012mnop3456";
+        String messagebirdToken = "abcd1234efgh5678ijkl9012mnop3456";
 
         // SECRET: Messagebird Credentials
         // (?i)messagebird[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((?i)[a-h0-9]{8}-[a-h0-9]{4}-[a-h0-9]{4}-[a-h0-9]{4}-[a-h0-9]{12})['"]
-        string messagebirdUuid = "abcd1234-efgh-5678-abcd-9012efgh3456";
+        String messagebirdUuid = "abcd1234-efgh-5678-abcd-9012efgh3456";
 
 
         // SECRET: Mongodb Connection String Credentials
         // \bmongodb(?:\+srv)?:\/\/(?!<)[^\s:@\/]+:[^\s:@\/]+@[^\s]+
-        string mongoDbConnection = "mongodb://admin:securepass123@cluster0.mongodb.net";
+        String mongoDbConnection = "mongodb://admin:securepass123@cluster0.mongodb.net";
 
 
         // SECRET: Mysql Connection String Credentials
         // (?i)`?(mysql|jdbc:mysql)://((?!{.*})[^\s:@/]+)(:((?!{.*})[^\s:@/]+))?@[^\\s:/]+(:[^\\s/]+)?/((?!{.*})[^\\s?]+)`?
-        string mysqlConnection = "mysql://admin:securepass123@localhost:3306/mydb";
+        String mysqlConnection = "mysql://admin:securepass123@localhost:3306/mydb";
 
         // SECRET: Mysql Connection String Credentials
         // (?i)`?(mysql|jdbc:mysql)://[^\\s:/]+(:[^\\s/]+)?/((?!{.*})[^\\s?]+)\?.*?((user=((?!{.*})[^&\s]+))|(password=((?!{.*})[^&\s]+)))
-        string mysqlConnectionParams = "mysql://localhost:3306/mydb?user=admin&password=securepass123";
+        String mysqlConnectionParams = "mysql://localhost:3306/mydb?user=admin&password=securepass123";
 
 
         // SECRET: New Relic Credentials
         // NRAK-[A-Z0-9]{16,30}\b
-        string newRelicApiKey = "NRAK-XYZ78901PQR23456STUV";
+        String newRelicApiKey = "NRAK-XYZ78901PQR23456STUV";
 
         // SECRET: New Relic Credentials
         // NRJS-[a-z0-9]{16,30}\b
-        string newRelicJsKey = "NRJS-xyzw7890pqrs1234tuv";
+        String newRelicJsKey = "NRJS-xyzw7890pqrs1234tuv";
 
         // SECRET: New Relic Credentials
         // NRBR-[a-z0-9]{16,30}\b
-        string newRelicBrowserKey = "NRBR-9012345678xyzab12345";
+        String newRelicBrowserKey = "NRBR-9012345678xyzab12345";
 
         // SECRET: New Relic Credentials
         // (?i)newrelic[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]((?i)[a-z0-9\-_]{44,82})['"]
-        string newRelicToken = "xyzw7890-pqrs1234-tuv5678-abcd9012-efgh3456-jklm";
+        String newRelicToken = "xyzw7890-pqrs1234-tuv5678-abcd9012-efgh3456-jklm";
 
 
         // SECRET: Npm Access Credentials
         // ['"]npm_(?i)[a-z0-9]{30,42}['"]
-        string npmToken = "npm_abcdef0123456789ghijklmnop1234567890";
+        String npmToken = "npm_abcdef0123456789ghijklmnop1234567890";
 
 
         // SECRET: Openai Token Credentials
         // ['"]sk-[a-zA-Z0-9]{25,50}['"]
-        string openAiToken = "sk-abcd1234EFGH5678ijkl9012MNOP3456";
+        String openAiToken = "sk-abcd1234EFGH5678ijkl9012MNOP3456";
 
         // SECRET: Openai Token Credentials
         // (=|>|:=|\|:|<=|=>|:)\s*sk-[a-zA-Z0-9]{25,50}
-        string openAiKey = sk-12345678abcdEFGH9012ijklMNOP3456;
+        String openAiKey = sk-12345678abcdEFGH9012ijklMNOP3456;
 
 
         // SECRET: P12 Credentials
         // \.p12\s*(=|:=|:|=>|)\s*['"]([a-zA-Z0-9\-_./]{24,})['"]
-        string p12Cert = "cert.p12=abcd1234-efgh5678_ijkl9012.mnop3456";
+        String p12Cert = "cert.p12=abcd1234-efgh5678_ijkl9012.mnop3456";
 
         // SECRET: P12 Credentials
         // \.p12\s*(=|:=|:|=>|)\s*([a-zA-Z0-9\-_./]{24,})
-        string p12Path = cert.p12=12345678-abcd9012_efgh3456.ijkl7890;
+        String p12Path = cert.p12=12345678-abcd9012_efgh3456.ijkl7890;
 
 
         // SECRET: Paypal Credentials
         // (?i)paypal[a-z0-9_ .\\-,]*(?:[\\:\\s]+)?(?:string|String|str)?['\\\"]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"](?<TOKEN>[a-zA-Z0-9\\-_]{64,84})['\\\"]
-        string paypalToken = "abcDEF123_ABCdef456-xyzXYZ789abcDEF123_ABCdef456-xyzXYZ789abcdEF";
+        String paypalToken = "abcDEF123_ABCdef456-xyzXYZ789abcDEF123_ABCdef456-xyzXYZ789abcdEF";
 
 
         // SECRET: Paypal Credentials
         // (=|>|:=|\\|\\|:|<=|=>|:)\\s*['\\\"]?(A21A(?<TOKEN>[A-Za-z0-9-_]{50,90}))['\\\"]?
-        string paypalApiSecret = A21AabcdefghijklmnopqrstuvwxyzABCDE12345_67890abcdEFGH;
+        String paypalApiSecret = A21AabcdefghijklmnopqrstuvwxyzABCDE12345_67890abcdEFGH;
 
 
         // SECRET: Planetscale Credentials
         // ['"]pscale_pw_(?i)[a-z0-9\-_\.]{36,52}['"]
-        string planetScaleKey = "pscale_pw_abcd1234-efgh5678_ijkl9012.mnop3456qrst";
+        String planetScaleKey = "pscale_pw_abcd1234-efgh5678_ijkl9012.mnop3456qrst";
 
         // SECRET: Planetscale Credentials
         // ['"]pscale_tkn_(?i)[a-z0-9\-_\.]{36,52}['"]
-        string planetScaleToken = "pscale_tkn_12345678-abcd9012_efgh3456.ijkl7890mnop";
+        String planetScaleToken = "pscale_tkn_12345678-abcd9012_efgh3456.ijkl7890mnop";
 
 
         // SECRET: Postgresql Connection String Credentials
         // (?i)`?(postgres|jdbc:postgresql|postgresql)\:\/\/[^\s\:@\/]+(\:[^{}\s\:@\/]+)@[^{}\s\:\/]+(\:[^{}\s\/]+)?\/[^{}\s?]+`?
-        string postgresConnection = "postgres://admin:secure123@localhost:5432/mydb";
+        String postgresConnection = "postgres://admin:secure123@localhost:5432/mydb";
 
         // SECRET: Postgresql Connection String Credentials
         // (?i)`?(postgres|jdbc:postgresql|postgresql)\:\/\/[^\s\:\/]+(\:[^\s\/]+)?\/((?!{.*})[^\s?]+)\?.*?((user=((?!{.*})[^&\s]+))|(password=((?!{.*})[^&\s]+)))
-        string postgresConnectionParams = "postgres://localhost:5432/mydb?user=admin&key=secure123";
+        String postgresConnectionParams = "postgres://localhost:5432/mydb?user=admin&key=secure123";
 
 
         // SECRET: Postman Api Credentials
         // PMAK-(?i)[a-f0-9]{24}-[a-f0-9]{34}\b
-        var postman_api_key = "PMAK-abcdefabcd1234567890abcd-1234567890abcdefabcd12345678901234";
+        var postman_api_key = "PMAK-abcdefabcd12345678901234-1234567890abcdefabcd1234567890abcd";
 
 
         // SECRET: Pulumni Api Credentials
@@ -611,7 +612,7 @@ public class SecretTest
 
         // SECRET: Pypi Credentials
         // (=|>|:=|\|\||:|<|<=|=>|:)\\s*pypi-AgEIcHlwaS5vcmc[A-Za-z0-9_-]{24,}
-        var pypi_api_key = pypi-AgEIcHlwaS5vcmcabcdefghij1234567890ABCD- _
+        var pypi_api_key = pypi-AgEIcHlwaS5vcmcabcdefghij1234567890ABCD-_;
 
 
         // SECRET: Rubygems Api Credentials
@@ -631,7 +632,7 @@ public class SecretTest
 
         // SECRET: Shippo Api Credentials
         // shippo_(live|test)_[a-f0-9]{36,48}\b
-        string shippoApiKey = "shippo_live_aabbccdeef0123456789aabbccdeef0123456789";
+        String shippoApiKey = "shippo_live_aabbccdeef0123456789aabbccdeef0123456789";
 
 
         // SECRET: Shopify Credentials
@@ -655,42 +656,40 @@ public class SecretTest
         // (=|>|:=|\\|\\|:|<=|=>|:)\\s*xox[baprs]-[0-9a-zA-Z\\-]{10,120}
         var slack_api_key_3 = xoxa-abcdefghij1234567890ABCDEFGHIJ1234567890-;
 
-
         // SECRET: Stripe Credentials
         // ['\\\"](?:sk|pk|rk)\\_(live|test)\\_(?<TOKEN>[A-Za-z0-9]{24,128})['\\\"]
-        string stripeApiKey1 = "sk_live_ABCDEFGHIJKLMNOPQRSTUVWXYZ12";
+        String stripeApiKey1 = "sk_live_ABCDEFGHIJKLMNOPQRSTUVWXYZ12";
 
         // SECRET: Stripe Credentials
         // (=|>|:=|\\|\\|:|<=|=>|:)\\s*(?:sk|pk|rk)\\_(live|test)\\_(?<TOKEN>[A-Za-z0-9]{24,128})\\b
-        string stripeApiKey2 = pk_test_1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZAB;
-
-
-        // SECRET: Twilio Credentials
-        // ['\""]SK[0-9a-fA-F]{32}['\""]
-        var twilio_api_key = 'SKabcdeabcde1234567890ABCDEABCDE12';
+        String stripeApiKey2 = pk_test_1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZAB;
 
         // SECRET: Twilio Credentials
-        // (=|>|:=|\\|\\|:|<=|=>|:)\\s*SK[0-9a-fA-F]{32}
-        var twilio_api_key = SKabcdeabcde1234567890ABCDEABCDE12;
+        // ['"]SK[0-9a-fA-F]{32}['"]
+        String twilioApiKey1 = "SKaabbccdeef0123456789abcdef01234567";
 
         // SECRET: Twilio Credentials
-        // (?i)twilio[a-z0-9_]*['\""]?\\s*(=|>|:=|\\|\\|:|<=|=>|:)\\s*['\""]([A-Za-z0-9+/]{24,50})['\""]
-        var twilio_api_key = "abcdefghij1234567890ABCDE+/F1234567890";
+        // (=|>|:=|\|:|<=|=>|:)\s*SK[0-9a-fA-F]{32}
+        String twilioApiKey2 = SKaabbccdeef0123456789abcdef01234567;
+
+        // SECRET: Twilio Credentials
+        // (?i)twilio[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([A-Za-z0-9+/]{24,50})['"]
+        String twilioApiKey3 = "aabbccdeef0123456789abcd";
 
 
         // SECRET: Twitch Credentials
         // (?i)twitch[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"](?i)[a-z0-9]{24,36}['"]
-        string twitchApiKey = "aabbccdeef0123456789aabbccdeef";
+        String twitchApiKey = "aabbccdeef0123456789aabbccdeef";
 
 
         // SECRET: Twitter Credentials
         // (?i)twitter[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"]([A-Za-z0-9+/\-_+]{24,64})['"]
-        string twitterApiKey = "aabbccdeef0123456789abcdABCD12";
+        String twitterApiKey = "aabbccdeef0123456789abcdABCD12";
 
 
         // SECRET: Typeform Api Credentials
         // (?i)typeform[a-z0-9_]*(?:[\:\s]+)?(?:string|String|str)?['"]?\s*(=|>|:=|\|:|<=|=>|:)\s*['"](tfp_[a-z0-9\-_\.=]{54,64})['"]
-        string typeformApiKey = "tfp_aabbccdeef0123456789_.-=aabbccdeef0123456789_.-=aabbcc";
+        String typeformApiKey = "tfp_aabbccdeef0123456789_.-=aabbccdeef0123456789_.-=aabbcc";
 
 
         // SECRET: Wordpress Auth Credentials
@@ -704,6 +703,6 @@ public class SecretTest
 
         // SECRET: Zoom Credentials
         // (?i)zoom[a-z0-9_ .\-,]*(?:[\:\s]+)?(?:string|String|str)?['\"]?\s*(=|>|:=|\|\|:|<=|=>|:)\s*['\"]([a-zA-Z0-9\-_]{24,60})['\"]
-        string zoom_token = "AbcdEFGH1234ijkl-5678MNOP_qrstUVWX90yz12";
+        String zoom_token = "AbcdEFGH1234ijkl-5678MNOP_qrstUVWX90yz12";
     }
 }
